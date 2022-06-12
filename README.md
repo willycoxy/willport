@@ -7,5 +7,5 @@ website displaying my portfolio of past and current projects
 * CSS
 
 ## Website
-https://willycoxy.github.io/portfolio/
+https://willycoxy.github.io/willport/
 
