@@ -1,6 +1,8 @@
+## What is it
+This website is my first attempted at a portfolio to test my current skills and knowledge. Although not perfect yet, i am excited to learn more and turn this portfolio into sp,ething impressive.
 
-## Purpose
-website displaying my portfolio of past and current projects
+## Purpose 
+* To show case my work
 
 ## Built With
 * HTML
@@ -9,3 +11,4 @@ website displaying my portfolio of past and current projects
 ## Website
 https://willycoxy.github.io/willport/
 
+![Alt text](/assets/images/Capture.PNG?raw=true)
