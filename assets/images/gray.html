@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)https://picfont.com/editor -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			<link rel="apple-touch-icon" href="https://picfont.com/icon-72-72.png"><link rel="shortcut icon" href="https://picfont.com/favicon.ico"> 
+			<meta name="google" content="notranslate"><meta name="google-site-verification" content="jWPEiU3tpAcQbX88jrmaoYajSUfcN9gmMKTBQGK83G8">
+							<title>Editor | Picture | Picfont</title><meta name="Keywords" content="editor,text,photo,picture,tool"><meta name="Description" content="Edit picture online, apply effects ,filters.">			
+				<link rel="stylesheet" href="./gray_files/style-edit-38.css">	
+				
+			</head><body style="cursor: auto;">
+			<div id="info_picture"></div>
+<div id="message_browser"></div><div id="element_dialog" class="ui-draggable ui-draggable-handle" style="position: relative;"></div>
+<div class="top_line_1"></div>
+<div class="header_n1">
+		<div class="logo_element">
+		<a href="https://picfont.com/?reset=yes"><img title="Back Home" id="logo_editor" src="./gray_files/logo.png" style="" alt=""></a>
+		<span id="logo_plus" style="font-size:0.8em;
+	color:#000000;
+	font-weight:bold;
+	text-shadow:0 1px 0 rgba(255,255,255,1);">SINCE 2008</span>
+		</div>
+		<div id="top_right_2" class="menu_ontherock">
+				<div class=""><input type="hidden" id="dl_url_page" value="dl-pic.php">
+<ul class="menu">
+					<li>
+						<a class="bt_ontherock" style="padding:0.4em 0.3em 0.3em 0.3em;" href="javascript:void(0);" onclick="dl_manager(&#39;jpg&#39;);">
+<svg class="va_mid" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"></path></svg>
+<span id="next_2020_1" class="after_sel_only">SAVE&nbsp;</span>
+</a>
+						<ul class="subMenu">
+							<li><a id="menu_jpg" onclick="dl_manager(&#39;jpg&#39;);" href="javascript:void(0);"><img src="./gray_files/jpg-icon.png" alt="jpg" style="vertical-align:middle;border:0;"> <span style="font-size:0.8em;">(medium quality : small file)</span></a></li>
+							<li><a id="menu_png" onclick="dl_manager(&#39;png&#39;);" href="javascript:void(0);"><img src="./gray_files/png-icon.png" alt="png" style="vertical-align:middle;border:0;"> <span style="font-size:0.8em;">(best quality : large file)</span></a></li>
+							<li><a id="menu_pdf" onclick="dl_manager(&#39;pdf&#39;);" href="javascript:void(0);"><img src="./gray_files/pdf-icon.png" alt="pdf" style="vertical-align:middle;border:0;"> <span style="font-size:0.8em;">(best quality : large file)</span></a></li>
+							<li><a id="menu_webp" onclick="dl_manager(&#39;webp&#39;);" href="javascript:void(0);"><span style="font-size:0.9em;color:#ff0000;">WEBP</span> <span style="font-size:0.8em;">(40% reduction : smallest)</span></a></li>						
+							<li><a id="menu_drive" onclick="save_pic_for_google_drive();" href="javascript:void(0);"><img src="./gray_files/google_drive.png" alt="jpg" style="vertical-align:middle;border:0;"> <span style="font-size:0.8em;">Save to Google Drive</span></a></li>						
+							<li><input id="save_pic_name" placeholder="picture name ?" type="text" value="" style="font-size:1em;padding:0.2em;"></li>
+						</ul>
+					</li>				
+				</ul>
+&nbsp;&nbsp;<a class="bt_ontherock" title="START A NEW BLANK IMAGE" href="javascript:void(0);" onclick="new_picture_create();">
+<svg id="create_svg_el" class="va_mid" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+<span id="next_2020_8" class="after_sel_only">NEW</span>
+</a>
+&nbsp;&nbsp;<a id="upload_data" class="bt_ontherock" title="UPLOAD PICTURE" href="javascript:void(0);">
+<svg id="upload_svg_el" class="va_mid" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 8l-5-5-5 5M12 4.2v10.3"></path></svg>
+<span id="next_2020_7" class="after_sel_only">UPLOAD</span>
+</a>
+<form id="upload_form_data" style="display:inline;" enctype="multipart/form-data" action="https://picfont.com/editor">
+	<span id="bg_update"></span>
+	<input id="file_upload_data" type="file" onclick="this.value=null;" name="upload_element">
+	<input type="hidden" id="resize_change" value="no">
+	<canvas id="picture_preview" style="display:none;"></canvas>		
+	<canvas id="picture_compressed" style="display:none;"></canvas>
+</form>
+&nbsp;&nbsp;<a class="bt_ontherock" id="paint_bg" title="CHANGE BACKGROUND COLOR" href="javascript:void(0);">
+<svg id="fill_svg_el" class="va_mid" version="1.1" fill="#000000" width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 108.2 122.88" style="enable-background:new 0 0 108.2 122.88" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style><g><path class="st0" d="M93.01,73.51c3.8,16.46,15.19,24.68,15.19,32.91c0,8.23-3.8,16.46-15.19,16.46 c-11.39,0-15.19-8.23-15.19-16.46C77.82,98.19,89.22,89.97,93.01,73.51L93.01,73.51z M11.63,5.91l5.32-5.32c0.8-0.8,2.1-0.8,2.9,0 l16.19,16.19l8.33-8.33c2.25-2.25,5.94-2.25,8.19,0l42.68,42.68c2.25,2.25,2.25,5.94,0,8.19l-42.68,42.68 c-2.25,2.25-5.94,2.25-8.19,0L1.69,59.33c-2.25-2.25-2.25-5.94,0-8.19l26.13-26.14L11.63,8.81C10.83,8.02,10.83,6.71,11.63,5.91 L11.63,5.91z M51.38,22.02l30.31,30.31c0.89,0.89,1.28,2.09,1.19,3.26H14.06c-0.1-1.17,0.3-2.37,1.18-3.26l30.31-30.31 C47.16,20.42,49.78,20.42,51.38,22.02L51.38,22.02z"></path></g></svg>
+<span id="next_2020_4" class="after_sel_only">BG COLOR</span>
+</a>
+<form method="post" style="display:none;" name="ch_bg_pic0" id="ch_form_bg" enctype="multipart/form-data" action="https://picfont.com/editor">						
+				<input id="bg_pic_val" class="cl_palette" onchange="update_bg_page()" style="width: 67px; padding: 3px; display: inline-block;" type="hidden" name="update_bg_page_name" value="#f8f8ff"><div class="sp-replacer sp-light"><div class="sp-preview"><div class="sp-preview-inner" style="background-color: rgb(248, 248, 255);"></div></div><div class="sp-dd">▼</div></div>
+				<span id="bg_pic_update"></span>	
+</form>
+&nbsp;&nbsp;<a id="crop_init_option" class="bt_ontherock" title="CROP PICTURE" href="javascript:void(0);" onclick="">
+<svg id="crop_svg_el" class="va_mid" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+<span id="next_2020_5" class="after_sel_only">CROP</span>
+</a>
+<form style="display:inline;"> 
+	  <input type="hidden" name="cx" id="crop_x" value="">
+	  <input type="hidden" name="cy" id="crop_y" value="">
+	  <input type="hidden" name="cw" id="crop_w" value="">
+	  <input type="hidden" name="ch" id="crop_h" value="">
+	  <input type="hidden" id="crop_status" value="on">	
+	  <input type="hidden" id="crop_mode_choice" value="normal">	   
+	  <a class="bt_ontherock" id="crop_picture_mode" style="display:none;" href="javascript:void(0);">CROP THIS
+	  <span id="crop_size" style="font-size:1.2em;color:#ff5700;"></span></a>	  		  
+</form>&nbsp;&nbsp;<a id="import_data" class="bt_ontherock" title="IMPORT IMAGES HERE" href="javascript:void(0);" onclick="">
+<svg id="import_svg_el" class="va_mid" width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.879 96.568" enable-background="new 0 0 122.879 96.568" xml:space="preserve"><g><path d="M5.535,15.447h98.221c1.527,0,2.891,0.62,3.883,1.611c0.99,0.991,1.611,2.396,1.611,3.882v70.134 c0,1.528-0.621,2.891-1.611,3.883c-0.082,0.082-0.166,0.165-0.289,0.247c-0.951,0.868-2.23,1.363-3.635,1.363H5.494 c-1.528,0-2.892-0.619-3.883-1.61S0,92.562,0,91.075V20.941c0-1.528,0.62-2.891,1.611-3.882s2.396-1.611,3.883-1.611H5.535 L5.535,15.447z M28.218,34.489c4.354,0,7.882,3.528,7.882,7.882s-3.528,7.883-7.882,7.883c-4.354,0-7.882-3.529-7.882-7.883 C20.335,38.018,23.864,34.489,28.218,34.489L28.218,34.489z M61.389,68.316l15.766-27.258l16.748,42.363l-78.165-0.001v-5.254 l6.57-0.327l6.567-16.093l3.282,11.496h9.855l8.537-22.004L61.389,68.316L61.389,68.316z M21.891,6.525 c-1.817,0-3.263-1.486-3.263-3.263C18.628,1.445,20.115,0,21.891,0h97.726c1.816,0,3.262,1.487,3.262,3.263v68.895 c0,1.818-1.486,3.264-3.262,3.264c-1.818,0-3.264-1.487-3.264-3.264V6.567H21.891V6.525L21.891,6.525z M102.723,21.974H6.567 v68.027h96.155V21.974L102.723,21.974z"></path></g></svg>
+<span id="next_2020_6" class="after_sel_only">IMPORT</span>
+</a>
+<form id="import_form_data" style="display:inline;" enctype="multipart/form-data" action="https://picfont.com/editor">					
+			<span id="bg_import"></span>
+			<input style="width:0;height:0;display:none" id="file_import_data" type="file" name="import_element">
+			
+			<input type="hidden" id="import_nb" name="import_nb_name" value="0"> 
+			<input type="hidden" id="import_nb_current" name="import_nb_current_name" value="0"> 
+			<input type="hidden" id="import_nb_delete" name="import_nb_delete_name" value="0"> 
+			</form>&nbsp;&nbsp;<a class="bt_ontherock" title="DELETE TEXTS &amp; ICONS" href="javascript:void(0);" onclick="reset_elements();">
+<svg id="del_svg_el" class="va_mid" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+<span id="next_2020_2" class="after_sel_only">DELETE</span>
+</a>
+&nbsp;&nbsp;<a id="group_element" class="bt_ontherock" title="SELECT ALL ELEMENTS" href="javascript:void(0);" onclick="link_page_el();">
+<svg id="l_group_element" class="va_mid" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg><svg class="va_mid" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+<span id="next_2020_9" class="after_sel_only">SELECT ALL</span>
+</a>
+
+&nbsp;&nbsp;<a class="bt_ontherock" style="font-size:0.9em;min-width:80px;" title="ZOOM PAGE" href="javascript:void(0);" onclick="">
+<svg class="va_mid" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+<span id="next_2020_3" class="after_sel_only"></span>
+<select style="display:none;" class="" id="zoom_select_data" name="zoom_data">
+<option value="100">100%</option><option value="90">90%</option><option value="80">80%</option><option value="70">70%</option><option value="60">60%</option><option value="50">50%</option><option value="40">40%</option><option value="30">30%</option><option value="20">20%</option><option value="10">10%</option></select><span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" tabindex="0" id="zoom_select_data-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="zoom_select_data-menu" aria-haspopup="true" aria-activedescendant="ui-id-343" aria-labelledby="ui-id-343" aria-disabled="false" style="width: 53px;"><span class="ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">100%</span></span></a>&nbsp;&nbsp;<a class="bt_ontherock" title="RESIZE IMAGE" style="font-size:0.9em;color:#ff5700;" href="javascript:void(0);" onclick="load_resize_mod();"><svg id="resize_svg_el" class="va_mid" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M14 10l6.1-6.1M9 21H3v-6M10 14l-6.1 6.1"></path></svg>
+	<span id="s_x" style="">455</span>&nbsp;x&nbsp;<span id="s_y" style="">484</span>&nbsp;px</a>&nbsp;&nbsp;<a id="fb_onmenu" class="bt_ontherock" title="SHARE ON FACEBOOK" href="https://www.facebook.com/sharer/sharer.php?u=https://picfont.com&amp;t=Add%20text%20to%20photos" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600&#39;);return false;" target="_blank">
+<svg class="va_mid" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#000"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm4 7.278V4.5h-2.286c-2.1 0-3.428 1.6-3.428 3.889v1.667H8v2.777h2.286V19.5h2.857v-6.667h2.286L16 10.056h-2.857V8.944c0-1.11.572-1.666 1.714-1.666H16z"></path></svg>
+</a>&nbsp;&nbsp;<a id="tw_onmenu" class="bt_ontherock" title="SHARE ON TWITTER" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600&#39;);return false;" target="_blank" href="https://twitter.com/intent/tweet?url=https://picfont.com&amp;text=Add%20text%20to%20photos%20with&amp;original_referer=">
+<svg class="va_mid" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#000"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm3.193 7c-1.586 0-2.872 1.243-2.872 2.777 0 .217.025.43.074.633a8.251 8.251 0 0 1-5.92-2.902c-.247.41-.389.887-.389 1.397 0 .963.507 1.813 1.278 2.311a2.94 2.94 0 0 1-1.301-.348v.036c0 1.345.99 2.467 2.304 2.723a2.98 2.98 0 0 1-1.298.047c.366 1.103 1.427 1.906 2.683 1.928a5.889 5.889 0 0 1-3.567 1.19c-.231 0-.46-.014-.685-.04A8.332 8.332 0 0 0 9.903 18c5.283 0 8.172-4.231 8.172-7.901 0-.12-.002-.24-.008-.36A5.714 5.714 0 0 0 19.5 8.302a5.869 5.869 0 0 1-1.65.437 2.8 2.8 0 0 0 1.263-1.536 5.87 5.87 0 0 1-1.824.674A2.915 2.915 0 0 0 15.193 7z"></path></svg>
+</a>
+&nbsp;&nbsp;<a id="expand_menu" class="bt_ontherock" title="INFO" href="javascript:void(0);" onclick="expand_menu();">
+<svg id="expand_svg" class="va_mid" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+</a>
+
+
+<input type="hidden" id="expand_limit_width" value="1215">
+</div>	
+			</div>		
+			<div id="top_right_1" class="top_right_1_c"></div>					
+	<div class="clr"></div>
+</div>
+<div style="border-top:0px solid #b3b3b3;"></div>
+	
+<span id="element_url_load"></span>
+<div id="m_bloc_content" style="width: 1920px; margin: 5px 0px; background-color: rgb(217, 217, 217);">
+<div id="left_block" class="left_block_c">
+<div id="left_block_1" class="left_block_1_c">			
+					<div class="clr"></div>	
+					<div id="block_1234" class="block_1234_c">	
+							<div style="border:0;padding:0;margin:0;">	
+								<div class="config_class_4" style="padding:3px 5px 3px 5px;">			
+		<div class="top_left_menu">
+				<a id="adds_on_texts_1" class="bt_menu_p2" style="padding:3px 2px 3px 2px;" title="TEXTS MODELS" href="javascript:void(0);" onclick="show_txt_examples();">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+				</a>
+		</div>
+		<div class="top_left_menu">
+			<a id="adds_on_gallery_1" class="bt_menu_p2" title="GALLERY" href="javascript:void(0);" onclick="show_gallery_im();">
+			 <span class="sp-edit sp-edit-gallery"></span>
+			</a>
+		</div>
+		<div class="top_left_menu">
+			<a id="adds_on_models_1" onclick="model_load();" class="bt_menu_p2" title="MODELS" href="javascript:void(0);">
+			 <span class="sp-edit sp-edit-model"></span>
+			</a>
+		</div>
+	
+		<div class="top_left_menu">
+			<a id="adds_on_icons_1" class="bt_menu_p2" title="ELEMENTS" href="javascript:void(0);" onclick="icon_menu_on_off();">
+			<img src="./gray_files/smiley_menu.svg" style="width:16px;height:16px;">
+			</a>
+		</div>
+		<div class="top_left_menu">
+			<a id="illustrate_ic" title="ILLUSTRATE" onclick="elements_magic();" class="bt_menu_p2" href="javascript:void(0);">
+			 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="vertical-align:middle;" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+			</a>
+		</div>
+						
+		<div class="top_left_menu">
+			<a id="adds_on_filters_1" class="bt_menu_p2" title="FILTERS" href="javascript:void(0);" onclick="show_filter_examples();">
+			<span class="sp-edit sp-edit-filter"></span>
+			
+			</a>
+		</div>	
+		<div class="top_left_menu">
+			<a id="adds_on_banners_1" class="bt_menu_p2" title="POSTER/POSTCARD..." href="javascript:void(0);" onclick="show_banner_examples();">
+			<span class="sp-edit sp-edit-poster"></span>	
+			</a>
+		</div>
+		<div class="top_left_menu">
+			<a id="m_sel9" onclick="grid_display();" class="bt_menu_p2" title="GRID" href="javascript:void(0);">
+			<span class="sp-edit sp-edit-grid"></span>
+			</a>
+		</div>
+		<div class="clr"></div>
+		<div id="close_element_from_menu" class="float_r" style="display:none;margin:0;">
+			<a href="javascript:void(0);" title="close" onclick="close_menu_element();">
+			<svg id="close_menu_element_svg" style="vertical-align:middle;" onmouseover="change_stroke_svg(&#39;on&#39;,this.id);" onmouseout="change_stroke_svg(&#39;off&#39;,this.id);" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+			</a>
+		</div>
+		<div class="clr"></div>	
+			<div id="illustrate_element" style="width:100%;"></div>
+			<div id="shape_t1" style="width:100%;"></div>
+			<div id="clipart_t1" style="width:100%;"></div>
+			<div id="ex_element" style="width:100%;"></div>
+			<div id="filter_element" style="width:100%;"></div>
+			<div id="banner_element" style="width:100%;"></div>
+			<div id="gallery_element" style="width:100%;"></div>
+			<div id="gallery_models" style="width:100%;"></div>
+			<div id="bg_element" style="width:100%;"></div>	
+</div>								<div class="config_class_2" style="padding-top:8px;padding-bottom:0px;">								
+									<div class="float_l" style="font-size:0.6em;">
+										<form name="options_loading" style="display:inline;">
+										<textarea id="pp0" placeholder="Enter a text here" onfocus="textarea_focus();" onkeydown="textarea_key_down()" onkeyup="auto_grow(this)" style="
+										font-size:1.6em;
+										max-width:247px;width:247px;
+										height:40px;
+										min-width:100px;max-height:80px;text-align:left;border:1px solid #b3b3b3;
+										padding:4px;min-height:39px;overflow:hidden;background-color:#ffffff;" class="form_arial" name="t"></textarea>
+										<input id="paragraph_on_off" name="paragraph_on_off_name" type="hidden" value="yes">
+										<input id="can_generate" name="can_generate_name" type="hidden" value="yes">
+										<input id="paragraph_video_info" type="hidden" value="no">	 
+										<div style="max-width:247px;width:247px;border:0px solid #000000;">
+										<a class="bt_menu_p2" style="margin:0;
+										width:100%;text-align:center;font-size:1.2em;" href="javascript:void(0);" title="" onclick="new_text();">
+										NEW
+										</a>
+										</div>	
+										<div id="nb_char_left" style="font-size:1em;border:0px solid #000000;float:right;">11 / 200</div>
+										 <div class="clr"></div>	 
+									</form></div>	
+									<div class="clr"></div>										
+								</div>	
+								<div class="clr"></div>				
+							</div>											
+							<div class="config_class_1">	
+								<select id="pp3" style="display:none;" name="fsel"> 
+
+<option value="Headline1" style="font-weight:bold;color:#000000;">------100% free-------------</option>
+<option selected="" value="Theater-Bold">Theater</option>
+<option value="Typewritter">Typewriter (mostly selected)</option>
+<option value="Anton">Anton (mostly selected)</option>
+<option value="Fifita_Regular">Fifita</option>  
+<option value="Nervous_rex">Rex</option>  
+<option value="Aqum">Aqum</option>  
+<option value="Inversionz">Inversionz</option>  
+<option value="Punch-Limit">Punch-Limit</option>
+<option value="ModernSociety-Regular">Modern Society</option>
+<option value="Marmo-ExtraBold">Marmo Bold</option>  
+<option value="Marmo-LightItalic">Marmo Italic</option>
+<option value="Redwing-Medium">Redwing-Medium</option>
+<option value="Redwing-Light">Redwing-Light</option>  
+<option value="Ustroke-Regular">Ustroke</option>
+<option value="Bareona">Bareona</option>  
+<option value="Grames">Grames</option>  
+<option value="Slender-Bold">Slender Bold</option>  
+<option value="Architectural">Architectural</option>
+<option value="Mordak">Mordak</option>
+<option value="Genuine">Genuine</option>  
+<option value="Metro-Uber">Metro-Uber</option>  
+<option value="NeonOne">NeonOne</option>  
+<option value="Forward-Round">Forward</option>
+<option value="jumpie">Jumpie</option> 
+<option value="Helio">Helio</option> 
+<option value="DonJose">DonJose</option> 
+<option value="Gradiola">Gradiola</option> 
+<option value="KubosBold">KubosBold</option>
+<option value="Samble">Samble</option>
+<option value="Anson">Anson</option>  
+<option value="alpha_echo">Alpha_echo</option>
+<option value="MorenaBold">Morena Bold</option>
+<option value="MorenaExtraLight">Morena Extra Light</option>
+<option value="Ocean-Bold">Ocean Bold</option>  
+<option value="Ocean-Light">Ocean Light</option>  
+<option value="SpartanMB-ExtraBold">SpartanMB ExtraBold</option>  
+<option value="Deciso-Bold">Deciso Bold</option>  
+<option value="Deciso-ExtraLight">Deciso Extra Light</option>  
+<option value="Deciso-ExtraLightItalic">Deciso Extra Light Italic</option>  
+<option value="Facon">Facon</option> 
+<option value="overmuch">Overmuch</option>  
+<option value="Auroor">Auroor</option>  
+<option value="ForestSmooth-Regular">ForestSmooth</option>
+<option value="Rock-N-Roll">Rock N Roll</option>  
+<option value="Searocks">Searocks</option> 
+<option value="Rise">Rise</option>
+<option value="Rustico-Regular">Rustico</option> 
+<option value="Berg-Regular">Berg</option> 
+<option value="Fixer-Regular">Fixer</option> 
+<option value="Briberra">Briberra</option> 
+<option value="Adrenaline-Regular">Adrenaline</option> 
+<option value="follana">Follana</option>
+<option value="Halogen-Regular">Halogen-Regular</option> 
+<option value="Beautify-Script">Beautify-Script</option>
+<option value="Oraqle-Script">Oraqle Script</option>  
+<option value="Quantum">Quantum</option>  
+<option value="Maveryk-Regular">Maveryk</option>  
+<option value="theboldfont">The Bold Font</option> 
+<option value="Failed">Failed</option>  
+<option value="Failed3dFilled">Failed3dFilled</option>  
+<option value="Matamata-Bold">Matamata Bold</option>  
+<option value="Take-cover">Take-Cover</option>  
+<option value="Lobster">Lobster</option>
+<option value="Brusher-Regular">Brusher Regular</option> 
+<option value="MAXWELL BOLD">Maxwell Bold</option>
+<option value="Noelan-script">Noelan Script</option>
+<option value="Bangers">Bangers</option>
+<option value="Bungee-Shade">Bungee-Shade</option>
+<option value="Bungee-Outline">Bungee-Outline</option>
+<option value="Lyric-Poetry">Lyric Poetry</option>
+<option value="Playlist-Caps">Playlist Caps</option>
+<option value="Playlist-Script">Playlist Script</option>
+<option value="BrokenChalk">Broken Chalk</option>
+<option value="GRAPAM">Graphic Attitude</option>  
+<option value="Ansley Display-Bold">Ansley Display-Bold</option>
+<option value="Headline">Headline</option>
+<option value="Script">Script</option>
+<option value="Point">Point</option>
+<option value="PorterSansBlock">PorterSansBlock</option>
+<option value="U-Typewritter">U-Typewritter</option>
+<option value="Komoda-Regular">Komoda-Regular</option>
+<option value="BEBAS___">BEBAS</option>
+<option value="Russian">Russian (language)</option>
+<option value="NotoNaskhArabic-Bold">Arabic (language)</option>
+<option value="NotoSans-ExtraCondensedBold">Swedish (language)</option>
+<option value="Japanese">Japanese (language)</option>
+<option value="NotoSansBengali-Bold">Bengali (language)</option>
+<option value="NotoSansDevanagari-Bold">Devanagari (language)</option>
+<option value="NotoSansTamil-Bold">Tamil (language)</option>
+<option value="NotoSansTelugu-Bold">Telugu (language)</option>
+<option value="NotoSansThai-Bold">Thai (language)</option>
+<option value="NotoSerifLao-Bold">Lao (language)</option>
+<option value="Amatic-Bold">Amatic-Bold</option>
+<option value="AmaticSC-Regular">AmaticSC-Regular</option>
+<option value="Fascinate-Regular">Fascinate-Regular</option>
+<option value="FascinateInline-Regular">FascinateInline-Regular</option>
+<option value="srfm-neon">srfm-neon</option>
+<option value="FerroRosso">FerroRosso</option>
+<option value="bloody">bloody</option>
+<option value="zombie">zombie</option>
+<option value="8bitOperatorPlus-Regular">8bitOperatorPlus-Regular</option>
+<option value="Airbrush">Airbrush</option><option value="AlegreSans-Regular">AlegreSans-Regular</option><option value="AlexBrush-Regular">AlexBrush-Regular</option><option value="Alpenkreuzer">Alpenkreuzer</option><option value="Amble-Bold">Amble-Bold</option><option value="Amble-Light">Amble-Light</option><option value="Antonio-Bold">Antonio-Bold</option><option value="Antonio-Regular">Antonio-Regular</option><option value="Archistico_Bold">Archistico_Bold</option><option value="Archistico_Simple">Archistico_Simple</option><option value="Arizonia-Regular">Arizonia-Regular</option><option value="Asap-Bold">Asap-Bold</option><option value="Asap-Regular">Asap-Regular</option><option value="At Sign Regular">At Sign Regular</option><option value="AutourOne-Regular">AutourOne-Regular</option><option value="BELLABOO-Regular">BELLABOO-Regular</option><option value="Bizon">Bizon</option><option value="BonvenoCF-Light">BonvenoCF-Light</option><option value="Boogaloo-Regular">Boogaloo-Regular</option><option value="BreeSerif-Regular">BreeSerif-Regular</option><option value="Brewsky">Brewsky</option><option value="BrokenGlass">BrokenGlass</option><option value="Bromine">Bromine</option><option value="BubblegumSans-Regular">BubblegumSans-Regular</option><option value="Cabin-Bold">Cabin-Bold</option><option value="Cabin-Italic">Cabin-Italic</option><option value="Cabin-Regular">Cabin-Regular</option><option value="CabinSketch-Bold">CabinSketch-Bold</option><option value="CakeFrostingDecorative">CakeFrostingDecorative</option><option value="Calligraserif">Calligraserif</option><option value="CevicheOne-Regular">CevicheOne-Regular</option><option value="Chalk Line Outline">Chalk Line Outline</option><option value="ChunkFive-Roman">ChunkFive-Roman</option><option value="Coda-Heavy">Coda-Heavy</option><option value="Comfortaa_Bold">Comfortaa_Bold</option><option value="Comfortaa_Thin">Comfortaa_Thin</option><option value="ComicRelief">ComicRelief</option><option value="Constantine">Constantine</option><option value="CooperHewitt-Light">CooperHewitt-Light</option><option value="CooperHewitt-LightItalic">CooperHewitt-LightItalic</option><option value="CooperHewitt-Semibold">CooperHewitt-Semibold</option><option value="CooperHewitt-SemiboldItalic">CooperHewitt-SemiboldItalic</option><option value="CooperHewitt-Thin">CooperHewitt-Thin</option><option value="CooperHewitt-ThinItalic">CooperHewitt-ThinItalic</option><option value="Cuprum-Bold">Cuprum-Bold</option><option value="Cuprum-Regular">Cuprum-Regular</option><option value="DPSDbeyond">DPSDbeyond</option><option value="Dagerotypos_0003">Dagerotypos_0003</option><option value="DancingScriptOT">DancingScriptOT</option><option value="DarkGardenMK">DarkGardenMK</option><option value="Delius-Regular">Delius-Regular</option><option value="DeliusUnicase-Bold">DeliusUnicase-Bold</option><option value="Double Strike">Double Strike</option><option value="DrawveticaMini">DrawveticaMini</option><option value="Dustismo">Dustismo</option><option value="Dustismo_Roman">Dustismo_Roman</option><option value="Dustismo_Roman_Italic">Dustismo_Roman_Italic</option><option value="Economica-Bold">Economica-Bold</option><option value="Economica-Regular">Economica-Regular</option><option value="Eligible-Bold">Eligible-Bold</option><option value="Eligible-Italic">Eligible-Italic</option><option value="EligibleSans-Regular">EligibleSans-Regular</option><option value="EuphoriaScript-Regular">EuphoriaScript-Regular</option><option value="FingerPaint-Regular">FingerPaint-Regular</option><option value="FloppyDisk">FloppyDisk</option><option value="Gold Plated">Gold Plated</option><option value="GrandHotel-Regular">GrandHotel-Regular</option><option value="Gravity-Bold">Gravity-Bold</option><option value="Gravity-Book">Gravity-Book</option><option value="Gravity-Light">Gravity-Light</option><option value="GreatVibes-Regular">GreatVibes-Regular</option><option value="Grunge Handwriting">Grunge Handwriting</option><option value="Halogen">Halogen</option><option value="Hand Drawn Shapes">Hand Drawn Shapes</option><option value="HeavyEquipment">HeavyEquipment</option><option value="Imperial Web">Imperial Web</option><option value="Isabella">Isabella</option><option value="Janitor">Janitor</option><option value="JosefinSans-Bold">JosefinSans-Bold</option><option value="JosefinSans-SemiBold">JosefinSans-SemiBold</option><option value="JuraBook">JuraBook</option><option value="JuraDemiBold">JuraDemiBold</option><option value="KaushanScript-Regular">KaushanScript-Regular</option><option value="Lavi">Lavi</option><option value="LeagueScriptThin-Regular">LeagueScriptThin-Regular</option><option value="LinBiolinum_K">LinBiolinum_K</option><option value="Matchbook">Matchbook</option><option value="Milkmoustachio">Milkmoustachio</option><option value="Molengo-Regular">Molengo-Regular</option><option value="Monoton-Regular">Monoton-Regular</option><option value="Monthoers">Monthoers</option><option value="Niconne-Regular">Niconne-Regular</option><option value="Nobile-Medium">Nobile-Medium</option><option value="Nobile-MediumItalic">Nobile-MediumItalic</option><option value="OpenSans-CondBold">OpenSans-CondBold</option><option value="OpenSans-CondLight">OpenSans-CondLight</option><option value="OpenSans-CondLightItalic">OpenSans-CondLightItalic</option><option value="OpenSans-Light">OpenSans-Light</option><option value="OpenSans-Regular">OpenSans-Regular</option><option value="Overhaul">Overhaul</option><option value="Overlock-Bold">Overlock-Bold</option><option value="Overlock-BoldItalic">Overlock-BoldItalic</option><option value="Overlock-Italic">Overlock-Italic</option><option value="PAETRB">PAETRB</option><option value="PAETRRG">PAETRRG</option><option value="Pacifico-Bold">Pacifico-Bold</option><option value="Pacifico-Light">Pacifico-Light</option><option value="Pacifico">Pacifico</option><option value="PassionOne-Regular">PassionOne-Regular</option><option value="Pecita">Pecita</option><option value="PermanentMarker">PermanentMarker</option><option value="PoetsenOne-Regular">PoetsenOne-Regular</option>
+<option value="Portmanteau Regular">Portmanteau Regular</option><option value="PrintedCircuitBoard">PrintedCircuitBoard</option><option value="Quantico-Regular">Quantico-Regular</option><option value="Quicksand-Bold">Quicksand-Bold</option><option value="Quicksand-BoldItalic">Quicksand-BoldItalic</option><option value="Quicksand-Italic">Quicksand-Italic</option><option value="Quicksand-Regular">Quicksand-Regular</option><option value="QuicksandDash-Regular">QuicksandDash-Regular</option><option value="Quimbie Ultra Heavy">Quimbie Ultra Heavy</option><option value="Quimbie">Quimbie</option><option value="Railway">Railway</option><option value="Raleway-Bold">Raleway-Bold</option><option value="Raleway-BoldItalic">Raleway-BoldItalic</option><option value="Raleway-Light">Raleway-Light</option><option value="Raleway-LightItalic">Raleway-LightItalic</option><option value="Raleway-Regular">Raleway-Regular</option><option value="Raleway-SemiBold">Raleway-SemiBold</option><option value="Raleway-Thin">Raleway-Thin</option><option value="RalewayDots-Regular">RalewayDots-Regular</option><option value="Rambla-Regular">Rambla-Regular</option><option value="Roboto-Bold">Roboto-Bold</option><option value="Roboto-BoldItalic">Roboto-BoldItalic</option><option value="Roboto-Light">Roboto-Light</option><option value="Roboto-LightItalic">Roboto-LightItalic</option><option value="Roboto-Regular">Roboto-Regular</option><option value="Roboto-Thin">Roboto-Thin</option><option value="RobotoCondensed-Bold">RobotoCondensed-Bold</option><option value="RobotoCondensed-Light">RobotoCondensed-Light</option><option value="RobotoCondensed-Regular">RobotoCondensed-Regular</option><option value="Rochester">Rochester</option><option value="RockSalt">RockSalt</option><option value="Sail-Regular">Sail-Regular</option><option value="Saniretro">Saniretro</option><option value="Sanitechtro">Sanitechtro</option><option value="Sansita-Bold">Sansita-Bold</option><option value="Sansita-ExtraBold">Sansita-ExtraBold</option><option value="Sansita-Italic">Sansita-Italic</option><option value="Sansita-Regular">Sansita-Regular</option><option value="Scratched Letters">Scratched Letters</option><option value="SixCaps">SixCaps</option><option value="Sniglet-ExtraBold">Sniglet-ExtraBold</option><option value="Sniglet-Regular">Sniglet-Regular</option><option value="Targa MS Hand">Targa MS Hand</option><option value="Targa MS">Targa MS</option><option value="Targa">Targa</option><option value="TitanOne-Regular">TitanOne-Regular</option><option value="Topeka">Topeka</option><option value="Ubuntu-Title">Ubuntu-Title</option><option value="Viafont">Viafont</option><option value="acacia">acacia</option><option value="andina">andina</option><option value="architxt">architxt</option><option value="banksb20">banksb20</option><option value="banksb26">banksb26</option><option value="bgrove">bgrove</option><option value="bgroveb">bgroveb</option><option value="blurrr letters">blurrr letters</option><option value="dustismo_bold">dustismo_bold</option><option value="dustismo_italic">dustismo_italic</option><option value="e-Pececito-font">e-Pececito-font</option><option value="edo">edo</option><option value="lampoon">lampoon</option><option value="ldr3">ldr3</option><option value="linesquare_rounded_extended">linesquare_rounded_extended</option><option value="look sir, droids">look sir, droids</option><option value="pointfree">pointfree</option><option value="quadrata preciosa">quadrata preciosa</option><option value="sohoma_extrabold">sohoma_extrabold</option><option value="sohoma_light">sohoma_light</option><option value="vipond_octic">vipond_octic</option>
+<option value="clipart">clipart</option>
+<option value="custom_font2020">custom_font</option>
+</select><span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" tabindex="0" id="pp3-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="pp3-menu" aria-haspopup="true" aria-activedescendant="ui-id-354" aria-labelledby="ui-id-354" aria-disabled="false" style="width: 183px;"><span class="ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">Theater</span></span>
+								&nbsp;
+								<span id="ft_area">
+								<a class="bt_menu_p2" style="font-size:0.9em;padding:2px 4px 2px 4px;" href="javascript:void(0)" onclick="preview_ft();">
+								<svg style="vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+								FONT</a>
+								</span>
+								<div class="clr"></div>				
+								<div id="show_memo" style="display:none;padding:5px 0 0 0;"></div>									
+								<input id="browser_lang" type="hidden" value="en">
+								<input id="gt_start" type="hidden" value="gt0.php">		
+								<input type="hidden" id="default_font" value="Theater-Bold">
+								<input id="info_transparency" type="hidden" value="yes">														
+								<input id="saved_for_gif" type="hidden" value="">
+								<input id="ref_x" type="hidden" value="300">
+								<input id="ref_y" type="hidden" value="90">
+								<input id="zindex_current" type="hidden" value="101">							
+								<input id="haschanged" type="hidden" value="">							
+								<input id="total_layer" type="hidden" value="2">
+								<input id="position_start_x" type="hidden" value="0">
+								<input id="position_start_y" type="hidden" value="0">								
+								<input id="screen_w_size" type="hidden" value="1920">							
+								<input id="is_model" type="hidden" value="no">
+								<input id="is_model_x" type="hidden" value="91">
+								<input id="is_model_y" type="hidden" value="96">							
+								<input id="editor_config" type="hidden" value="1">
+								<input id="l_pp3" type="hidden" value="">
+								<input id="pp3_clipart" type="hidden" value="no">
+								<input id="rotation_image_val" type="hidden" value="0">
+								<input id="pp1" type="hidden" name="st" value="40">
+								<input id="poster_data" type="hidden" name="p_data_01" value="no">							
+								<input id="ft_name_url" type="hidden" name="ft_name_url0" value="Theater-Bold">
+								<div id="fonts_load" style="overflow:auto;width:100%;"></div>	
+								<div style="border-top:1px solid #FFFFFF;margin:10px 0 5px 0;"></div>							
+								
+								<a class="bt_menu_p2" style="font-size:0.9em;" onclick="check_custom_font(&#39;yes&#39;);" id="import_custom_font_data" href="javascript:void(0);">CUSTOM FONT</a>							
+								<input style="width:0;height:0;display:none" id="file_import_custom_font_data" type="file" accept=".ttf,.TTF,.ot,.OTF" name="import_custom_font_element">
+								<span id="name_font_custom">
+								</span>								
+								<input id="custom_font_choice" type="hidden" value="no">								
+																
+								<a class="bt_menu_p2" style="font-size:0.9em;" onclick="load_modal_multilingual_font();" id="f_font" href="javascript:void(0);">MULTILINGUAL</a>
+								<a class="bt_menu_p2 blinking_menu" style="font-size:0.9em;" onclick="meme_text();" id="f_font" href="javascript:void(0);">MEME TEXT</a>
+								<div id="output_font_custom"></div>
+								<span id="g_div_at">
+									<input type="hidden" id="number_selected" name="number_selected_name" value="0">								</span>																
+							</div>								
+									<input id="error_check" type="hidden" name="error_check_v" value="no">
+									<input id="poster_maker" type="hidden" name="poster_maker_name" value="no">									
+									<input type="hidden" id="selected_div" name="selected_div_name" value="2">
+									<input type="hidden" id="nb_layer" name="nb_layer_name" value="2">
+									<input type="hidden" id="choice_gallery" name="choice_gallery_name" value="no">
+									<input type="hidden" id="choice_pattern" name="choice_pattern_name" value="no">															
+							</div>	
+							<div class="clr"></div>	
+							<div style="margin:0 0 5px 0;">
+								<div class="config_class_1" style="margin:0;padding:5px;font-size:0.7em;color:#000000;">					 
+									 <div style="margin:0 0 3px 0;"> 
+										<div class="float_l" style="margin:5px 0 0 0;width:150px;border:0px solid #000000;">
+										Move with keyboard <img src="./gray_files/arrows-keyboard-2.png" style="vertical-align:middle;">
+										</div>										
+										<div class="float_l" style="margin-top:0.6em;margin-left:5em;">
+											<input type="hidden" id="arrow_activate_status" value="off">
+											<input type="hidden" id="move_with_keyboard_status_message" value="no">											
+											<input type="checkbox" class="checkbox_switch" id="switch0"><label class="label_switch" for="switch0">Toggle</label>
+										</div>
+										<div class="clr"></div>
+										<div id="move_with_keyboard_message_output"></div>
+									</div>
+								</div>		
+							</div>						
+								<input id="x_y_activation" type="hidden" value="yes">
+								<input id="border_red_activation" type="hidden" value="yes">								
+								<div style="margin:0 0 5px 0;">
+									<div class="config_class_1" style="margin:0;padding:5px;font-size:0.7em;color:#000000;">					 
+										 <div style="margin:0 0 3px 0;"> 								
+											<div class="float_l" style="margin:5px 0 0 0;width:150px;border:0px solid #000000;">
+											Disable Background 
+											</div>
+											<div class="float_l" style="margin-top:0.4em;margin-left:5em;">
+											 <input type="checkbox" class="checkbox_switch" id="switch1"><label class="label_switch" for="switch1">Toggle</label>
+											  <input type="hidden" id="nobg_status" value="off">
+											</div>
+											<div class="float_r" style="margin:3px 5px 0 0;">
+												<span id="all_enable_mode" title="More option..." class="ui-icon ui-icon-triangle-1-s"></span>
+											</div>
+											<div class="clr"></div>
+										</div>				
+										<div id="next_activation" style="display:none;">	
+										   <div class="b_top_w" style="margin:0;">
+											<div class="layer_space_1">
+											  Disable Layer coordinate
+											</div>
+											<div class="r_txt_on_off" style="margin-left:5em;">	
+											<input type="checkbox" class="checkbox_switch" id="switch2"><label class="label_switch" for="switch2">Toggle</label>								
+											 </div>
+											 <div class="clr"></div>
+										   </div>   
+										   <div class="b_top_w" style="margin:3px 0 0 0;">
+												<div class="layer_space_1">
+												Disable Layer <span style="border:1px dashed #ff0000;padding:3px;">red border</span> 
+												</div>
+												<div class="r_txt_on_off" style="margin-left:5em;">
+												<input type="checkbox" class="checkbox_switch" id="switch3"><label class="label_switch" for="switch3">Toggle</label>
+												</div>
+												<div class="clr"></div>
+											</div>									
+											<div class="b_top_w" style="margin:3px 0 0 0;">
+												<div class="layer_space_1">
+												Disable Eye Dropper
+												</div>
+												<div class="r_txt_on_off" style="margin-left:5em;">											
+												<input type="checkbox" class="checkbox_switch" id="switch4"><label class="label_switch" for="switch4">Toggle</label>
+												</div>
+												<div class="clr"></div>
+											</div>											
+											<div class="b_top_w" style="margin:3px 0 0 0;">
+												<div class="layer_space_1">
+												Disable Gif
+												</div>
+												<div class="r_txt_on_off" style="margin-left:5em;">												
+												<input type="checkbox" class="checkbox_switch" id="switch5"><label class="label_switch" for="switch5">Toggle</label>											
+												</div>
+												<div class="clr"></div>
+											</div>	
+											<div id="disable_message_output"></div>	  
+										</div>
+									</div>				
+								</div>
+								
+							<div style="margin:5px 0 5px 0;width:280px;">						
+							<div id="left_block_ad" class="config_class_1" style="margin:0;padding:4px 5px 2px 5px;"><ins class="adsbygoogle" style="display:inline-block;width:260px;height:70px" data-ad-client="ca-pub-2797137122235082" data-ad-slot="8208397582"></ins></div>
+							</div>	
+							<input id="zoom_w" type="hidden" value="455">
+							<input id="zoom_h" type="hidden" value="484"> 
+							<input id="max_w_editor" type="hidden" value="1277.6">
+							<input id="max_h_editor" type="hidden" value="760">							
+							<input id="left_part_width" type="hidden" value="360">
+							<input id="min_height_picture" type="hidden" value="605">
+							<input id="gt_choice" type="hidden" value="center">
+							<input id="z_i100" type="hidden" value="455">
+ 							<input id="z_y100" type="hidden" value="484">
+							<input id="layer_list_display" type="hidden" value="1">
+							<div class="clr"></div>	
+							<span id="layer_info_filter"></span>
+							<span id="add-ons"></span>							<div class="layer_all_show_c" style="height:240px;">
+								<div id="layer_info" class="layer_info_c"><div id="list_2" onclick="select_layer(&#39;2&#39;);" class="config_class_3" style="border: 1px dashed rgb(255, 87, 0);"><span class="" id="tlist_2">Coming Soon</span><div style="border-top:1px solid #f5fafe;margin:3px 0 0 0;padding:3px 0 0 0;"><a class="l_config" style="font-size:1.1em;" href="javascript:void(0);" title="duplicate content" onclick="select_layer(&#39;2&#39;);overlay_on_list(&#39;2&#39;,&#39;multiply&#39;,&#39;Coming%20Soon&#39;,&#39;&#39;);">x2</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" title="Align Top" onclick="select_layer(&#39;2&#39;);top_centered_text();"><span class="sp-edit sp-edit-atop"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" title="Align Center" onclick="select_layer(&#39;2&#39;);centered_text();"><span class="sp-edit sp-edit-amiddle"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" title="Align Bottom" onclick="select_layer(&#39;2&#39;);bottom_centered_text();"><span class="sp-edit sp-edit-abottom"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" title="Paragraph settings" onclick="paragraph_status(&#39;Coming%20Soon&#39;);"><span class="sp-edit sp-edit-paragraph"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" title="Layer position in first place" onclick="select_layer(&#39;2&#39;);overlay_on_list(&#39;2&#39;,&#39;overlay&#39;,&#39;Coming%20Soon&#39;,&#39;&#39;);"><span id="overlay_2" class="sp-edit sp-edit-overlay"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" title="show/hide" onclick="show_hide_g_content(&#39;2&#39;);"><span id="eye_2" class="sp-edit sp-edit-eye1"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" title="delete" onclick="$(&#39;#list_2&#39;).hide();delete_content(&#39;2&#39;,false)"><span class="sp-edit sp-edit-del-layer"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;<input title="For Multi-Selection" type="checkbox" onclick="dd_block(2);restore_no_group_element();" id="dd_sel2" value="0"></div></div></div>							
+							</div>
+							<input id="bg_layer_list" type="hidden" value="3">	
+								
+								
+							<div id="left_block_2" style="margin:5px 0 5px 0;width:280px;">						
+							<div class="config_class_1" style="margin:0;padding:5px;">					
+																										
+								<div class="float_l" style="padding:0;margin:0 1.4em 0 0.2em;">
+								<a class="l_0" title="Homepage" style="text-decoration:none;font-size:0.7em;" href="https://picfont.com/?reset=yes"><svg id="home_el_svg" onmouseover="change_stroke_with_color_svg(&#39;on&#39;,&#39;#ff5700&#39;,this.id);" onmouseout="change_stroke_with_color_svg(&#39;off&#39;,&#39;#000000&#39;,this.id);" style="vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"></path><path d="M9 22V12h6v10M2 10.6L12 2l10 8.6"></path></svg></a>
+								</div>								
+								<div class="float_l" style="padding:0;margin:0 1.4em 0 0;">
+								<a class="l_0" title="Feedback" style="text-decoration:none;font-size:0.7em;" target="_blank" href="https://picfont.com/feedback.php"><svg id="comment_el_svg" onmouseover="change_stroke_with_color_svg(&#39;on&#39;,&#39;#ff5700&#39;,this.id);" onmouseout="change_stroke_with_color_svg(&#39;off&#39;,&#39;#000000&#39;,this.id);" style="vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+								</div>								
+								<div class="float_l" style="padding:0;margin:0 1.2em 0 0;">
+								<a class="l_0" style="text-decoration:none;font-size:0.8em;text-shadow:none;font-family:arial,helvetica,sans-serif" target="_blank" href="https://picfont.com/features/add-text.php"><svg id="help_el_svg" onmouseover="change_stroke_with_color_svg(&#39;on&#39;,&#39;#ff5700&#39;,this.id);" onmouseout="change_stroke_with_color_svg(&#39;off&#39;,&#39;#000000&#39;,this.id);" style="vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> HELP</a>
+								</div>								
+								<div class="float_l" style="margin:0 1.2em 0 0;">	
+								<a class="l_0" title="Demo video" href="https://www.youtube.com/channel/UCfD_a5oAER-xHG4_PpPOWjw/videos" target="_blank"><svg id="yt_el_svg" onmouseover="$(this).attr(&#39;fill&#39;,&#39;#ff5700&#39;);" onmouseout="$(this).attr(&#39;fill&#39;,&#39;#000000&#39;);" style="vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#000"><path d="M12.04 3.5c.59 0 7.54.02 9.34.5a3.02 3.02 0 0 1 2.12 2.15C24 8.05 24 12 24 12v.04c0 .43-.03 4.03-.5 5.8A3.02 3.02 0 0 1 21.38 20c-1.76.48-8.45.5-9.3.51h-.17c-.85 0-7.54-.03-9.29-.5A3.02 3.02 0 0 1 .5 17.84c-.42-1.61-.49-4.7-.5-5.6v-.5c.01-.9.08-3.99.5-5.6a3.02 3.02 0 0 1 2.12-2.14c1.8-.49 8.75-.51 9.34-.51zM9.54 8.4v7.18L15.82 12 9.54 8.41z"></path></svg></a>
+								</div>
+								
+								<div class="float_l" style="margin:0 0 0 0;">	
+								
+								
+								<a class="l_config" target="_blank" title="Twitter page" href="https://twitter.com/picfont">
+										<svg style="vertical-align:middle;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#00b0e1"><path d="M24 4.37a9.6 9.6 0 0 1-2.83.8 5.04 5.04 0 0 0 2.17-2.8c-.95.58-2 1-3.13 1.22A4.86 4.86 0 0 0 16.61 2a4.99 4.99 0 0 0-4.79 6.2A13.87 13.87 0 0 1 1.67 2.92 5.12 5.12 0 0 0 3.2 9.67a4.82 4.82 0 0 1-2.23-.64v.07c0 2.44 1.7 4.48 3.95 4.95a4.84 4.84 0 0 1-2.22.08c.63 2.01 2.45 3.47 4.6 3.51A9.72 9.72 0 0 1 0 19.74 13.68 13.68 0 0 0 7.55 22c9.06 0 14-7.7 14-14.37v-.65c.96-.71 1.79-1.6 2.45-2.61z"></path></svg> @picfont</a>	
+								</div>	
+										
+								<div class="clr"></div>
+							</div> 													
+							</div>	
+							
+							
+								<input id="e_share00" type="hidden" value="n"><input type="hidden" id="is_creating_picture" name="is_creating_picture_name" value="no"><input type="hidden" id="content_create_picture" name="content_create_picture_name" value="example">					</div>	
+					<div style="margin:0 0 5px 0;">
+						<div class="config_class_1" style="margin:0;padding:5px;font-size:0.7em;color:#ff5700;">
+							<div id="d_bt" class="float_l" style="padding:0;margin:0;">
+							Want to support Picfont ?
+								<a title="Support Picfont ?" class="donate_bt" target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=postmaster@picfont.com&amp;item_name=If+you+want+to+show+your+support+for+Picfont&amp;item_number=You+can+donate+here+...&amp;currency_code=USD">DONATE</a>							</div>
+							<div class="clr"></div>
+						</div>			
+					</div>								
+				</div>				
+				<div id="right_block" class="right_block_c" style="min-width: 1277.6px; width: 1277.6px;">				
+					<div style="padding:0;margin:0;border:0px solid #000000;background-color:#f3f3f3;">
+						<div class="menu_text_effect_size" style="padding:0 0 0 0;float:left;border:0px solid #000000;max-width:400px;margin:0;">								
+									<table style="border:0px solid #000000;">
+									<tbody><tr>
+									<td style="width:110px;">
+										<div id="part_left_fx_1" style="margin:0 0 0 0;
+										background-color:#f3f3f3;
+										padding:0.1em 0.3em 0.1em 0.5em;border-right:1px solid #e5e5e5;">
+											<span id="t_optionc0">Text</span> <span id="t_c0">color</span> <input id="pp2" class="cl_palette" onchange="check_if_content();is_same_choice_1c_2c();content_change(true);" style="max-width: 50px; display: inline-block;" type="hidden" name="ct" value="#000000"><div class="sp-replacer sp-light"><div class="sp-preview"><div class="sp-preview-inner" style="background-color: rgb(0, 0, 0);"></div></div><div class="sp-dd">▼</div></div>
+											<span id="option_effect" style="display:none;">Outline</span> 
+										</div>	
+									</td>
+									<td>								
+									<div class="" style="background-color:#f3f3f3;
+									padding:0.1em 0.3em 0.1em 0.5em;
+									
+									border-right:1px solid #e5e5e5;
+									">				
+											<div id="fx_l" class="float_l" style="margin:0.3em 0.1em 0 0;">
+											<select style="display:none;" id="pp6_c" name="textoption">
+											<option value="3" selected="">No option</option>
+											<option value="14">Glow Normal</option>
+											<option value="15">Glow Strong</option>	
+											<option value="19">Outline &amp; Glow</option>
+											<option value="13">Gradient</option>				
+											<option value="8">Background</option>
+											<option value="7">Shadow thinner</option>
+											<option value="5">Shadow thin</option> 
+											<option value="2">Shadow large</option>
+											<option value="16">Shadow X large</option>
+											<option value="10">Shadow Mix</option>								
+											<option value="6">Outline thinner</option>
+											<option value="4">Outline thin</option>
+											<option value="1">Outline large</option>
+											<option value="9">Outline Mix</option>		
+											<option value="17">Texture &amp; Sh.</option>
+											<option value="18">Texture &amp; Out.</option>																								
+											</select><span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" tabindex="0" id="pp6_c-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="pp6_c-menu" aria-haspopup="true" aria-activedescendant="ui-id-639" aria-labelledby="ui-id-639" aria-disabled="false" style="width: 98px;"><span class="ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">No option</span></span>
+								
+											<span id="padding_for_bg_txt" style="display:none;">										
+
+														<input onchange="$(&#39;#bg_set_padding&#39;).val(this.value);content_change(true);" type="number" min="1" max="50" step="1" style="vertical-align:top;cursor:pointer;border:1px solid #CCCCCC;width:35px;
+												border-radius:2px;margin:0 0 0 0;
+												font-size:1.1em;padding:0.3em 0.2em 0.3em 0.3em;background-color:#ffffff;color:#000000;" id="bg_set_padding" value="10">
+																				
+											</span>	  
+											
+											</div>
+										
+										
+										
+										
+										
+											<div id="s_c_color" class="float_l">
+											<input id="pp2_outline" class="cl_palette" onchange="check_if_content();init_o_s_effect();content_change(true);" style="max-width: 50px; display: inline-block;" type="hidden" name="ct_outline" value="#ffffff"><div class="sp-replacer sp-light"><div class="sp-preview"><div class="sp-preview-inner" style="background-color: rgb(255, 255, 255);"></div></div><div class="sp-dd">▼</div></div>
+											<input id="t_init" type="hidden" name="t_init_name" value="000000">
+											</div>
+											
+											<input type="hidden" id="pattern_choice" value="pattern_1">
+											<input type="hidden" id="select_small_w" value="">		
+											
+											<div class="clr"></div>							
+									</div>
+									</td>
+									</tr></tbody></table>								
+									
+								
+						</div>
+				
+						<div class="menu_text_effect_size" style="float:left;border:0px solid #000000;
+						padding:0.2em 0 0.5em 0.5em;">
+									<div style="margin:0.5em 0.2em 0 0;padding:0;border:0px solid #000000;">
+											<div class="float_l">
+												<input id="pp1_slider" onkeypress="return event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57" onkeyup="check_font_size_post();" onchange="check_font_size_post();" onmouseover=" $(this).css(&#39;color&#39;,&#39;#ff5700&#39;);" onmouseout=" $(this).css(&#39;color&#39;,&#39;#000000&#39;);" type="number" min="5" max="160" step="1" style="vertical-align:top;cursor:pointer;border:1px solid #CCCCCC;width:35px;
+												border-radius:2px;margin:0 0 0 0;
+												font-size:1.1em;padding:0.3em 0.2em 0.3em 0.3em;background-color:#ffffff;color:#000000;" value="40">
+											
+												<input id="pp1_0" type="range" style="vertical-align: middle; padding: 0px; margin: 0.5em 0px 0px; width: 140px;" onchange="check_if_content();$(&#39;#pp1&#39;).val(this.value);$(&#39;#pp1_slider&#39;).val(this.value);content_change(true);" name="pp1_0_00" max="160" min="5" step="1" value="40">									
+												
+												
+													<a class="bt_menu_p2" style="vertical-align:top;margin:0;font-size:0.7em;
+													padding:0.3em 0.5em 0.3em 0.5em;" href="javascript:void(0)" onclick="expand_menu_txt();">
+													<img id="t_curve_menu_svg" class="va_mid" style="width:16px;height:16px;" src="./gray_files/t-curve.svg" alt="">
+													<svg id="t_opacity_menu_svg" class="va_mid" style="opacity:0.5;" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>	
+													<svg id="t_rotation_menu_svg" class="va_mid" style="transform: rotate(45deg);" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
+													
+													</a>
+												
+												
+											</div>
+																				
+											
+											<div class="clr"></div>	
+									 </div>
+								
+						</div>
+						<div style="width:100%;border:0px solid #000000;">
+							<span id="texture_list"></span>
+						</div>
+						<div class="clr"></div>	
+						<div id="curve_rotation_transparency" class="menu_text_effect_size" style="display:none;">
+									
+									<table style="border:0px solid #000000;margin:0;padding:0;">
+									<tbody><tr>
+									<td style="">
+										<div id="curve_section" style="margin:0 0 0 0;
+										
+										padding:0.1em 0.8em 0.1em 0.5em;
+										
+										border-right:1px solid #e5e5e5;
+										width:252px;
+										">
+									
+											
+												<span id="txt_curve_title" style="text-decoration: none;">Text Curve</span>
+										
+												
+												<input onchange="check_if_content();distortion_status();" id="distortion_yes" type="radio" name="distortion" value="yes">Yes
+												<input onchange="check_if_content();distortion_status();" id="distortion_no" type="radio" name="distortion" value="no" checked="checked">No
+												
+												
+												&nbsp;
+												<select style="display:none;" id="distortion_value" name="distortion_option">
+												<option value="45" selected="">Normal</option>
+												<option value="90">Medium</option> 
+												<option value="180">Strong</option> 
+												<option value="-45">Reverse Normal</option>
+												<option value="-90">Reverse Medium</option> 
+												<option value="-180">Reverse Strong</option> 
+												</select><span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" tabindex="0" id="distortion_value-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="distortion_value-menu" aria-haspopup="true" aria-activedescendant="ui-id-656" aria-labelledby="ui-id-656" aria-disabled="false" style="width: 98px;"><span class="ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">Normal</span></span>
+										</div>
+												
+									</td>		
+									
+									<td>
+										<div id="" style="margin:0 0 0 0;
+										
+										padding:0.1em 0.8em 0.1em 0.5em;
+										border-right:1px solid #e5e5e5;
+										
+										">
+											<span id="txt_transparent_title">Transparency</span>
+											&nbsp;&nbsp;		
+											<select style="display: none;" id="opacity_t" name="opacity_option">
+											<option value="no" selected="">No</option>
+											<option value="114">90%</option>
+											<option value="102">80%</option> 
+											<option value="89">70%</option> 
+											<option value="76">60%</option> 
+											<option value="63">50%</option>
+											<option value="50">40%</option> 
+											<option value="38">30%</option> 
+											<option value="25">20%</option>
+											<option value="13">10%</option> 
+											<option value="6">5%</option> 
+											</select><span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" tabindex="0" id="opacity_t-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="opacity_t-menu" aria-haspopup="true" aria-activedescendant="ui-id-662" aria-labelledby="ui-id-662" aria-disabled="false" style="width: 53px;"><span class="ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">No</span></span>
+										</div>
+									</td>
+									
+									<td>	
+											<div id="" style="margin:0 0 0 0;padding:0.2em 0.5em 0.2em 0em;">							
+	<input type="hidden" id="choice_rotation_sign" value="+"> 
+	
+												<table style="border:0;margin:0;padding:0;">
+												<tbody><tr>
+												<td style="">
+												<span id="txt_rotation_title">Rotation</span> 
+												</td>										
+												<td style="font-size:1.2em;">				
+											<input class="bt_rotation_sign" onclick="change_rotation_sign();" style="border:1px solid #cccccc;" type="button" id="choice_rotation_el" value="+">			
+											<input style="border:1px solid #cccccc;" class="bt_rotation" type="text" id="pp4" onkeypress="return event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57" onkeyup="rotation_post();" value="0">
+																							°
+														</td>
+														<td> <svg class="va_mid mobile_no_990" style="cursor:pointer;" onclick="reset_rotation();" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 2v6h6M2.66 15.57a10 10 0 1 0 .57-8.38"></path></svg>														
+														</td>								
+														</tr>									
+														</tbody></table>								
+											</div>										
+									</td>	
+									</tr>
+									</tbody></table>
+							<div class="clr"></div>	
+											</div>		
+					</div>	
+					<div id="imageplacepicall" style="width: 1277.6px;">			
+						<div id="b_picture_element" class="b_picture_element_c" style="height: 760px; width: 1277.6px;">	
+							<div id="show_atext" class="float_l"></div>	
+							<div class="clr"></div>
+									
+						<input type="hidden" id="last_selected_layer_memory" value=""> 
+						<input type="hidden" id="get_color_px_image" value="no"> 
+						<input type="hidden" id="url_color_px_image" value=""> 
+						<input type="hidden" id="info_color_px_image" value="n"> 
+						<canvas id="cs" style="display:none;"></canvas>
+						<div id="colorpicker_list" class="bg_eye_dropper"></div>							
+						<div id="colorpicker_area" class="eye_dropper_picture">										
+							<a class="l_0" id="cp_image_choice" title="EYE DROPPER" href="javascript:void(0);" onclick="color_picker_cv();">
+							<svg version="1.1" id="cp_svg_1" style="width:20px;height:20px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.06 122.88" xml:space="preserve"><g><path style="fill-rule:evenodd;clip-rule:evenodd;" d="M95.19,57.99l-4.2-4.2l6.98-6.98c6.22,0.18,12.49-2.1,17.24-6.84c9.14-9.14,9.14-23.97,0-33.11 c-9.14-9.14-23.97-9.14-33.11,0c-4.75,4.75-7.02,11.02-6.84,17.24l-6.98,6.98l-4.51-4.51c-1.51-1.51-3.96-1.51-5.47,0l-2.19,2.19 c-1.51,1.51-1.51,3.96,0,5.47l4.51,4.51l-53.5,53.5L0,122.88l29.82-7.93l53.5-53.5l4.2,4.2c1.51,1.51,3.96,1.51,5.47,0l2.19-2.19 C96.7,61.95,96.7,59.5,95.19,57.99L95.19,57.99z M28.37,108.97l-20.83,6.01l5.45-21.38L59.38,47.2l15.38,15.38L28.37,108.97 L28.37,108.97z"></path></g></svg>
+							</a>
+						</div><div id="ins_pic" class="instant_picture">
+			<img title="  SAVE|INSTANT" onclick="save_pic_for_gif(&#39;read&#39;);" style="cursor:pointer;vertical-align: middle;" src="./gray_files/instant-picture.png"></div><span id="imageplacepic"><div id="output_i2" class=""><div style="position: absolute; z-index: 100; inset: 183.781px auto auto 111px; width: 225px; height: 49px; opacity: 1;" onmouseover="over_this(2)" onmouseup="up_this(2)" ondblclick="dbl_this(2)" onmousedown="down_this(2)" onmouseout="out_this(2)" class="dragme ui-draggable ui-draggable-handle" id="im_d2">
+			
+				<img style="border: 1px dashed rgb(255, 0, 0);" src="./gray_files/gt1.php" class="bp_0" id="im_d2_im">
+				
+				
+				
+				<div id="et_0122" title="DELETE" onclick="delete_content(2,true)" style="cursor: pointer; float: right; margin: -2px -4px 0px 0px; height: 16px; width: 16px; border: 0px solid rgb(0, 0, 0); display: block;">	
+					<svg class="svg_close_el_editor" style="vertical-align: top; width: 16px; height: 16px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+				</div>
+				
+				
+				
+				<div id="dl_el_2" title="SAVE" class="ic_svg_el" onclick="dl_uniq_el(&#39;im_d2_im&#39;);" style="float: right; margin: -2px 8px 0px 0px; height: 16px; width: 16px; cursor: pointer; border: 0px solid rgb(0, 0, 0); display: block;"><svg style="vertical-align:top;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"></path></svg>
+				</div>
+				
+				<div id="x2_2" class="ic_svg_el" onclick="select_layer(&#39;2&#39;);start_x2_element(&#39;2&#39;);" style="float: right; font-size: 0.7em; margin: 0px 8px 0px 0px; cursor: pointer; border: 0px solid rgb(0, 0, 0); display: block;">
+				x2
+				</div>
+				
+				
+				<div id="x_y_2" style="float: left; margin: -2px 0px 0px; border: 0px solid rgb(0, 0, 0); font-family: verdana, sans-serif; font-size: 0.8em; color: rgb(255, 255, 255); text-shadow: rgb(0, 0, 0) 0.1em 0.1em 0.2em;"></div>
+				
+				
+				
+				
+			</div></div><div id="uploaded_element" onclick="new_text();" style="margin: 0px; cursor: pointer; background-image: url(&quot;example/LtQN8t.jpg&quot;); width: 455px; height: 484px; zoom: 1; transform-origin: 0px 0px;"></div></span>						</div>				
+					</div>
+					<div id="restart_canvas" style="border:0px solid #000000;font-size:0.8em;">
+					
+					<table style="border:0px solid #000000;">
+						<tbody><tr>
+						<td><span style="font-size:1.3em;">👉</span>
+						</td>
+						<td>
+						<a class="l_0" title="New blank image" id="start_from_scratch" href="javascript:void(0);" onclick="if(confirm(&#39;Are you sure ?&#39;)){create_new_picture(800,533);}">START FROM SCRATCH ?</a>
+						
+						</td>
+						</tr>
+					</tbody></table>
+					</div>
+			</div>	
+		<div id="right_r_block" class="right_block_global"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2797137122235082" data-ad-slot="8033823686" data-ad-format="auto"></ins></div>
+		<div class="clr"></div>			
+</div>
+<input type="hidden" id="last_linear" value="">						
+<input type="hidden" id="real_pic_size" name="real_pic_size_name" value="no"> 				
+<input type="hidden" id="filter_value" value="no">	
+<input type="hidden" id="shape_value" value="no">		
+<input type="hidden" id="filter_number" value="0">								
+<input type="hidden" id="is_loading_model" name="is_loading_model_name" value="no"> 
+<input type="hidden" id="resize_new_x" value="0">	
+<input type="hidden" id="resize_new_y" value="0">	
+<input type="hidden" id="open_menu_illustrate" value="2">	
+<img src="./gray_files/b6d2fc092246.png" alt="" style="display:none;width:0;height:0;border:0;" title="">
+<div class="clr"></div><div id="b_op0"></div><div id="b_op1"></div><div id="content_cookie_1"></div> 
+<script src="./gray_files/lib0121-0.js.download"></script>
+<script src="./gray_files/mod425-s.js.download"></script><div class="sp-container sp-hidden sp-light sp-palette-buttons-disabled sp-palette-only sp-initial-disabled"><div class="sp-palette-container"><div class="sp-palette sp-thumb sp-cf"><div class="sp-cf sp-palette-row sp-palette-row-0"><span title="#000000" data-color="rgb(0, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 0);"></span></span><span title="#444444" data-color="rgb(68, 68, 68)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(68, 68, 68);"></span></span><span title="#666666" data-color="rgb(102, 102, 102)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 102, 102);"></span></span><span title="#999999" data-color="rgb(153, 153, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(153, 153, 153);"></span></span><span title="#cccccc" data-color="rgb(204, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(204, 204, 204);"></span></span><span title="#eeeeee" data-color="rgb(238, 238, 238)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(238, 238, 238);"></span></span><span title="#f3f3f3" data-color="rgb(243, 243, 243)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(243, 243, 243);"></span></span><span title="#ffffff" data-color="rgb(255, 255, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-1"><span title="#ff0000" data-color="rgb(255, 0, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 0);"></span></span><span title="#ff9900" data-color="rgb(255, 153, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 153, 0);"></span></span><span title="#ffff00" data-color="rgb(255, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 0);"></span></span><span title="#00ff00" data-color="rgb(0, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 0);"></span></span><span title="#00ffff" data-color="rgb(0, 255, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 255);"></span></span><span title="#0000ff" data-color="rgb(0, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 255);"></span></span><span title="#9900ff" data-color="rgb(153, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(153, 0, 255);"></span></span><span title="#ff00ff" data-color="rgb(255, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-2"><span title="#f4cccc" data-color="rgb(244, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(244, 204, 204);"></span></span><span title="#fce5cd" data-color="rgb(252, 229, 205)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(252, 229, 205);"></span></span><span title="#fff2cc" data-color="rgb(255, 242, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 242, 204);"></span></span><span title="#d9ead3" data-color="rgb(217, 234, 211)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 234, 211);"></span></span><span title="#d0e0e3" data-color="rgb(208, 224, 227)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(208, 224, 227);"></span></span><span title="#cfe2f3" data-color="rgb(207, 226, 243)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(207, 226, 243);"></span></span><span title="#d9d2e9" data-color="rgb(217, 210, 233)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 210, 233);"></span></span><span title="#ead1dc" data-color="rgb(234, 209, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 209, 220);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-3"><span title="#ea9999" data-color="rgb(234, 153, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 153, 153);"></span></span><span title="#f9cb9c" data-color="rgb(249, 203, 156)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(249, 203, 156);"></span></span><span title="#ffe599" data-color="rgb(255, 229, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 229, 153);"></span></span><span title="#b6d7a8" data-color="rgb(182, 215, 168)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(182, 215, 168);"></span></span><span title="#a2c4c9" data-color="rgb(162, 196, 201)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(162, 196, 201);"></span></span><span title="#9fc5e8" data-color="rgb(159, 197, 232)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(159, 197, 232);"></span></span><span title="#b4a7d6" data-color="rgb(180, 167, 214)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(180, 167, 214);"></span></span><span title="#d5a6bd" data-color="rgb(213, 166, 189)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(213, 166, 189);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-4"><span title="#e06666" data-color="rgb(224, 102, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(224, 102, 102);"></span></span><span title="#f6b26b" data-color="rgb(246, 178, 107)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(246, 178, 107);"></span></span><span title="#ffd966" data-color="rgb(255, 217, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 217, 102);"></span></span><span title="#93c47d" data-color="rgb(147, 196, 125)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(147, 196, 125);"></span></span><span title="#76a5af" data-color="rgb(118, 165, 175)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(118, 165, 175);"></span></span><span title="#6fa8dc" data-color="rgb(111, 168, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(111, 168, 220);"></span></span><span title="#8e7cc3" data-color="rgb(142, 124, 195)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(142, 124, 195);"></span></span><span title="#c27ba0" data-color="rgb(194, 123, 160)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(194, 123, 160);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-5"><span title="#cc0000" data-color="rgb(204, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(204, 0, 0);"></span></span><span title="#e69138" data-color="rgb(230, 145, 56)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(230, 145, 56);"></span></span><span title="#f1c232" data-color="rgb(241, 194, 50)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(241, 194, 50);"></span></span><span title="#6aa84f" data-color="rgb(106, 168, 79)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(106, 168, 79);"></span></span><span title="#45818e" data-color="rgb(69, 129, 142)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(69, 129, 142);"></span></span><span title="#3d85c6" data-color="rgb(61, 133, 198)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(61, 133, 198);"></span></span><span title="#674ea7" data-color="rgb(103, 78, 167)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(103, 78, 167);"></span></span><span title="#a64d79" data-color="rgb(166, 77, 121)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(166, 77, 121);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-6"><span title="#990000" data-color="rgb(153, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(153, 0, 0);"></span></span><span title="#b45f06" data-color="rgb(180, 95, 6)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(180, 95, 6);"></span></span><span title="#bf9000" data-color="rgb(191, 144, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(191, 144, 0);"></span></span><span title="#38761d" data-color="rgb(56, 118, 29)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(56, 118, 29);"></span></span><span title="#134f5c" data-color="rgb(19, 79, 92)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(19, 79, 92);"></span></span><span title="#0b5394" data-color="rgb(11, 83, 148)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(11, 83, 148);"></span></span><span title="#351c75" data-color="rgb(53, 28, 117)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(53, 28, 117);"></span></span><span title="#741b47" data-color="rgb(116, 27, 71)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(116, 27, 71);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-7"><span title="#660000" data-color="rgb(102, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 0, 0);"></span></span><span title="#783f04" data-color="rgb(120, 63, 4)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(120, 63, 4);"></span></span><span title="#7f6000" data-color="rgb(127, 96, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(127, 96, 0);"></span></span><span title="#274e13" data-color="rgb(39, 78, 19)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(39, 78, 19);"></span></span><span title="#0c343d" data-color="rgb(12, 52, 61)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(12, 52, 61);"></span></span><span title="#073763" data-color="rgb(7, 55, 99)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(7, 55, 99);"></span></span><span title="#20124d" data-color="rgb(32, 18, 77)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(32, 18, 77);"></span></span><span title="#4c1130" data-color="rgb(76, 17, 48)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(76, 17, 48);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-selection"></div></div><div class="sp-palette-button-container sp-cf"><button type="button" class="sp-palette-toggle">more</button></div></div><div class="sp-picker-container"><div class="sp-top sp-cf"><div class="sp-fill"></div><div class="sp-top-inner"><div class="sp-color" style="background-color: rgb(0, 0, 255);"><div class="sp-sat"><div class="sp-val"><div class="sp-dragger" style="top: 0px; left: 0px;"></div></div></div></div><div class="sp-clear sp-clear-display" title="Clear Color Selection" style="display: none;"></div><div class="sp-hue"><div class="sp-slider" style="top: 0px;"></div></div></div><div class="sp-alpha"><div class="sp-alpha-inner"><div class="sp-alpha-handle" style="left: 0px;"></div></div></div></div><div class="sp-input-container sp-cf"><input class="sp-input" type="text" spellcheck="false"></div><div class="sp-initial sp-thumb sp-cf"></div><div class="sp-button-container sp-cf"><a class="sp-cancel" href="https://picfont.com/editor#">CANCEL</a><button type="button" class="sp-choose">choose</button></div></div></div><div class="sp-container sp-hidden sp-light sp-palette-buttons-disabled sp-palette-only sp-initial-disabled"><div class="sp-palette-container"><div class="sp-palette sp-thumb sp-cf"><div class="sp-cf sp-palette-row sp-palette-row-0"><span title="#000000" data-color="rgb(0, 0, 0)" class="sp-thumb-el sp-thumb-dark sp-thumb-active"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 0);"></span></span><span title="#444444" data-color="rgb(68, 68, 68)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(68, 68, 68);"></span></span><span title="#666666" data-color="rgb(102, 102, 102)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 102, 102);"></span></span><span title="#999999" data-color="rgb(153, 153, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(153, 153, 153);"></span></span><span title="#cccccc" data-color="rgb(204, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(204, 204, 204);"></span></span><span title="#eeeeee" data-color="rgb(238, 238, 238)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(238, 238, 238);"></span></span><span title="#f3f3f3" data-color="rgb(243, 243, 243)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(243, 243, 243);"></span></span><span title="#ffffff" data-color="rgb(255, 255, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-1"><span title="#ff0000" data-color="rgb(255, 0, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 0);"></span></span><span title="#ff9900" data-color="rgb(255, 153, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 153, 0);"></span></span><span title="#ffff00" data-color="rgb(255, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 0);"></span></span><span title="#00ff00" data-color="rgb(0, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 0);"></span></span><span title="#00ffff" data-color="rgb(0, 255, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 255);"></span></span><span title="#0000ff" data-color="rgb(0, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 255);"></span></span><span title="#9900ff" data-color="rgb(153, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(153, 0, 255);"></span></span><span title="#ff00ff" data-color="rgb(255, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-2"><span title="#f4cccc" data-color="rgb(244, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(244, 204, 204);"></span></span><span title="#fce5cd" data-color="rgb(252, 229, 205)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(252, 229, 205);"></span></span><span title="#fff2cc" data-color="rgb(255, 242, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 242, 204);"></span></span><span title="#d9ead3" data-color="rgb(217, 234, 211)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 234, 211);"></span></span><span title="#d0e0e3" data-color="rgb(208, 224, 227)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(208, 224, 227);"></span></span><span title="#cfe2f3" data-color="rgb(207, 226, 243)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(207, 226, 243);"></span></span><span title="#d9d2e9" data-color="rgb(217, 210, 233)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 210, 233);"></span></span><span title="#ead1dc" data-color="rgb(234, 209, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 209, 220);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-3"><span title="#ea9999" data-color="rgb(234, 153, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 153, 153);"></span></span><span title="#f9cb9c" data-color="rgb(249, 203, 156)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(249, 203, 156);"></span></span><span title="#ffe599" data-color="rgb(255, 229, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 229, 153);"></span></span><span title="#b6d7a8" data-color="rgb(182, 215, 168)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(182, 215, 168);"></span></span><span title="#a2c4c9" data-color="rgb(162, 196, 201)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(162, 196, 201);"></span></span><span title="#9fc5e8" data-color="rgb(159, 197, 232)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(159, 197, 232);"></span></span><span title="#b4a7d6" data-color="rgb(180, 167, 214)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(180, 167, 214);"></span></span><span title="#d5a6bd" data-color="rgb(213, 166, 189)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(213, 166, 189);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-4"><span title="#e06666" data-color="rgb(224, 102, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(224, 102, 102);"></span></span><span title="#f6b26b" data-color="rgb(246, 178, 107)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(246, 178, 107);"></span></span><span title="#ffd966" data-color="rgb(255, 217, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 217, 102);"></span></span><span title="#93c47d" data-color="rgb(147, 196, 125)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(147, 196, 125);"></span></span><span title="#76a5af" data-color="rgb(118, 165, 175)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(118, 165, 175);"></span></span><span title="#6fa8dc" data-color="rgb(111, 168, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(111, 168, 220);"></span></span><span title="#8e7cc3" data-color="rgb(142, 124, 195)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(142, 124, 195);"></span></span><span title="#c27ba0" data-color="rgb(194, 123, 160)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(194, 123, 160);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-5"><span title="#cc0000" data-color="rgb(204, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(204, 0, 0);"></span></span><span title="#e69138" data-color="rgb(230, 145, 56)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(230, 145, 56);"></span></span><span title="#f1c232" data-color="rgb(241, 194, 50)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(241, 194, 50);"></span></span><span title="#6aa84f" data-color="rgb(106, 168, 79)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(106, 168, 79);"></span></span><span title="#45818e" data-color="rgb(69, 129, 142)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(69, 129, 142);"></span></span><span title="#3d85c6" data-color="rgb(61, 133, 198)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(61, 133, 198);"></span></span><span title="#674ea7" data-color="rgb(103, 78, 167)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(103, 78, 167);"></span></span><span title="#a64d79" data-color="rgb(166, 77, 121)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(166, 77, 121);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-6"><span title="#990000" data-color="rgb(153, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(153, 0, 0);"></span></span><span title="#b45f06" data-color="rgb(180, 95, 6)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(180, 95, 6);"></span></span><span title="#bf9000" data-color="rgb(191, 144, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(191, 144, 0);"></span></span><span title="#38761d" data-color="rgb(56, 118, 29)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(56, 118, 29);"></span></span><span title="#134f5c" data-color="rgb(19, 79, 92)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(19, 79, 92);"></span></span><span title="#0b5394" data-color="rgb(11, 83, 148)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(11, 83, 148);"></span></span><span title="#351c75" data-color="rgb(53, 28, 117)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(53, 28, 117);"></span></span><span title="#741b47" data-color="rgb(116, 27, 71)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(116, 27, 71);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-7"><span title="#660000" data-color="rgb(102, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 0, 0);"></span></span><span title="#783f04" data-color="rgb(120, 63, 4)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(120, 63, 4);"></span></span><span title="#7f6000" data-color="rgb(127, 96, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(127, 96, 0);"></span></span><span title="#274e13" data-color="rgb(39, 78, 19)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(39, 78, 19);"></span></span><span title="#0c343d" data-color="rgb(12, 52, 61)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(12, 52, 61);"></span></span><span title="#073763" data-color="rgb(7, 55, 99)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(7, 55, 99);"></span></span><span title="#20124d" data-color="rgb(32, 18, 77)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(32, 18, 77);"></span></span><span title="#4c1130" data-color="rgb(76, 17, 48)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(76, 17, 48);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-selection"></div></div><div class="sp-palette-button-container sp-cf"><button type="button" class="sp-palette-toggle">more</button></div></div><div class="sp-picker-container"><div class="sp-top sp-cf"><div class="sp-fill"></div><div class="sp-top-inner"><div class="sp-color" style="background-color: rgb(255, 0, 0);"><div class="sp-sat"><div class="sp-val"><div class="sp-dragger" style="top: 0px; left: 0px;"></div></div></div></div><div class="sp-clear sp-clear-display" title="Clear Color Selection" style="display: none;"></div><div class="sp-hue"><div class="sp-slider" style="top: 0px;"></div></div></div><div class="sp-alpha"><div class="sp-alpha-inner"><div class="sp-alpha-handle" style="left: 0px;"></div></div></div></div><div class="sp-input-container sp-cf"><input class="sp-input" type="text" spellcheck="false"></div><div class="sp-initial sp-thumb sp-cf"></div><div class="sp-button-container sp-cf"><a class="sp-cancel" href="https://picfont.com/editor#">CANCEL</a><button type="button" class="sp-choose">choose</button></div></div></div><div class="sp-container sp-hidden sp-light sp-palette-buttons-disabled sp-palette-only sp-initial-disabled"><div class="sp-palette-container"><div class="sp-palette sp-thumb sp-cf"><div class="sp-cf sp-palette-row sp-palette-row-0"><span title="#000000" data-color="rgb(0, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 0);"></span></span><span title="#444444" data-color="rgb(68, 68, 68)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(68, 68, 68);"></span></span><span title="#666666" data-color="rgb(102, 102, 102)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 102, 102);"></span></span><span title="#999999" data-color="rgb(153, 153, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(153, 153, 153);"></span></span><span title="#cccccc" data-color="rgb(204, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(204, 204, 204);"></span></span><span title="#eeeeee" data-color="rgb(238, 238, 238)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(238, 238, 238);"></span></span><span title="#f3f3f3" data-color="rgb(243, 243, 243)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(243, 243, 243);"></span></span><span title="#ffffff" data-color="rgb(255, 255, 255)" class="sp-thumb-el sp-thumb-light sp-thumb-active"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-1"><span title="#ff0000" data-color="rgb(255, 0, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 0);"></span></span><span title="#ff9900" data-color="rgb(255, 153, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 153, 0);"></span></span><span title="#ffff00" data-color="rgb(255, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 0);"></span></span><span title="#00ff00" data-color="rgb(0, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 0);"></span></span><span title="#00ffff" data-color="rgb(0, 255, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 255);"></span></span><span title="#0000ff" data-color="rgb(0, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 255);"></span></span><span title="#9900ff" data-color="rgb(153, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(153, 0, 255);"></span></span><span title="#ff00ff" data-color="rgb(255, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-2"><span title="#f4cccc" data-color="rgb(244, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(244, 204, 204);"></span></span><span title="#fce5cd" data-color="rgb(252, 229, 205)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(252, 229, 205);"></span></span><span title="#fff2cc" data-color="rgb(255, 242, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 242, 204);"></span></span><span title="#d9ead3" data-color="rgb(217, 234, 211)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 234, 211);"></span></span><span title="#d0e0e3" data-color="rgb(208, 224, 227)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(208, 224, 227);"></span></span><span title="#cfe2f3" data-color="rgb(207, 226, 243)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(207, 226, 243);"></span></span><span title="#d9d2e9" data-color="rgb(217, 210, 233)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 210, 233);"></span></span><span title="#ead1dc" data-color="rgb(234, 209, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 209, 220);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-3"><span title="#ea9999" data-color="rgb(234, 153, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 153, 153);"></span></span><span title="#f9cb9c" data-color="rgb(249, 203, 156)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(249, 203, 156);"></span></span><span title="#ffe599" data-color="rgb(255, 229, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 229, 153);"></span></span><span title="#b6d7a8" data-color="rgb(182, 215, 168)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(182, 215, 168);"></span></span><span title="#a2c4c9" data-color="rgb(162, 196, 201)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(162, 196, 201);"></span></span><span title="#9fc5e8" data-color="rgb(159, 197, 232)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(159, 197, 232);"></span></span><span title="#b4a7d6" data-color="rgb(180, 167, 214)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(180, 167, 214);"></span></span><span title="#d5a6bd" data-color="rgb(213, 166, 189)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(213, 166, 189);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-4"><span title="#e06666" data-color="rgb(224, 102, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(224, 102, 102);"></span></span><span title="#f6b26b" data-color="rgb(246, 178, 107)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(246, 178, 107);"></span></span><span title="#ffd966" data-color="rgb(255, 217, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 217, 102);"></span></span><span title="#93c47d" data-color="rgb(147, 196, 125)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(147, 196, 125);"></span></span><span title="#76a5af" data-color="rgb(118, 165, 175)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(118, 165, 175);"></span></span><span title="#6fa8dc" data-color="rgb(111, 168, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(111, 168, 220);"></span></span><span title="#8e7cc3" data-color="rgb(142, 124, 195)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(142, 124, 195);"></span></span><span title="#c27ba0" data-color="rgb(194, 123, 160)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(194, 123, 160);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-5"><span title="#cc0000" data-color="rgb(204, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(204, 0, 0);"></span></span><span title="#e69138" data-color="rgb(230, 145, 56)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(230, 145, 56);"></span></span><span title="#f1c232" data-color="rgb(241, 194, 50)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(241, 194, 50);"></span></span><span title="#6aa84f" data-color="rgb(106, 168, 79)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(106, 168, 79);"></span></span><span title="#45818e" data-color="rgb(69, 129, 142)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(69, 129, 142);"></span></span><span title="#3d85c6" data-color="rgb(61, 133, 198)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(61, 133, 198);"></span></span><span title="#674ea7" data-color="rgb(103, 78, 167)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(103, 78, 167);"></span></span><span title="#a64d79" data-color="rgb(166, 77, 121)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(166, 77, 121);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-6"><span title="#990000" data-color="rgb(153, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(153, 0, 0);"></span></span><span title="#b45f06" data-color="rgb(180, 95, 6)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(180, 95, 6);"></span></span><span title="#bf9000" data-color="rgb(191, 144, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(191, 144, 0);"></span></span><span title="#38761d" data-color="rgb(56, 118, 29)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(56, 118, 29);"></span></span><span title="#134f5c" data-color="rgb(19, 79, 92)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(19, 79, 92);"></span></span><span title="#0b5394" data-color="rgb(11, 83, 148)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(11, 83, 148);"></span></span><span title="#351c75" data-color="rgb(53, 28, 117)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(53, 28, 117);"></span></span><span title="#741b47" data-color="rgb(116, 27, 71)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(116, 27, 71);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-7"><span title="#660000" data-color="rgb(102, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 0, 0);"></span></span><span title="#783f04" data-color="rgb(120, 63, 4)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(120, 63, 4);"></span></span><span title="#7f6000" data-color="rgb(127, 96, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(127, 96, 0);"></span></span><span title="#274e13" data-color="rgb(39, 78, 19)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(39, 78, 19);"></span></span><span title="#0c343d" data-color="rgb(12, 52, 61)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(12, 52, 61);"></span></span><span title="#073763" data-color="rgb(7, 55, 99)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(7, 55, 99);"></span></span><span title="#20124d" data-color="rgb(32, 18, 77)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(32, 18, 77);"></span></span><span title="#4c1130" data-color="rgb(76, 17, 48)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(76, 17, 48);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-selection"></div></div><div class="sp-palette-button-container sp-cf"><button type="button" class="sp-palette-toggle">more</button></div></div><div class="sp-picker-container"><div class="sp-top sp-cf"><div class="sp-fill"></div><div class="sp-top-inner"><div class="sp-color" style="background-color: rgb(255, 0, 0);"><div class="sp-sat"><div class="sp-val"><div class="sp-dragger" style="top: 0px; left: 0px;"></div></div></div></div><div class="sp-clear sp-clear-display" title="Clear Color Selection" style="display: none;"></div><div class="sp-hue"><div class="sp-slider" style="top: 0px;"></div></div></div><div class="sp-alpha"><div class="sp-alpha-inner"><div class="sp-alpha-handle" style="left: 0px;"></div></div></div></div><div class="sp-input-container sp-cf"><input class="sp-input" type="text" spellcheck="false"></div><div class="sp-initial sp-thumb sp-cf"></div><div class="sp-button-container sp-cf"><a class="sp-cancel" href="https://picfont.com/editor#">CANCEL</a><button type="button" class="sp-choose">choose</button></div></div></div>
+
+
+
+
+		
+	<div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"><div style="display: none;">POSTER/POSTCARD...</div><div style="display: none;">GRID</div><div style="display: none;">DELETE</div><div style="display: none;">ELEMENTS</div><div style="display: none;">MODELS</div><div style="display: none;">Back Home</div><div style="display: none;">Back Home</div><div style="display: none;">MODELS</div><div>MODELS</div></div><div class="ui-selectmenu-menu ui-front"><ul aria-hidden="true" aria-labelledby="pp3-button" id="pp3-menu" class="ui-menu ui-widget ui-widget-content ui-corner-bottom" role="listbox" tabindex="0" aria-activedescendant="ui-id-354" aria-disabled="false"><li class="ui-menu-item" id="ui-id-353" tabindex="-1" role="option">------100% free-------------</li><li class="ui-menu-item ui-state-focus" id="ui-id-354" tabindex="-1" role="option">Theater</li><li class="ui-menu-item" id="ui-id-355" tabindex="-1" role="option">Typewriter (mostly selected)</li><li class="ui-menu-item" id="ui-id-356" tabindex="-1" role="option">Anton (mostly selected)</li><li class="ui-menu-item" id="ui-id-357" tabindex="-1" role="option">Fifita</li><li class="ui-menu-item" id="ui-id-358" tabindex="-1" role="option">Rex</li><li class="ui-menu-item" id="ui-id-359" tabindex="-1" role="option">Aqum</li><li class="ui-menu-item" id="ui-id-360" tabindex="-1" role="option">Inversionz</li><li class="ui-menu-item" id="ui-id-361" tabindex="-1" role="option">Punch-Limit</li><li class="ui-menu-item" id="ui-id-362" tabindex="-1" role="option">Modern Society</li><li class="ui-menu-item" id="ui-id-363" tabindex="-1" role="option">Marmo Bold</li><li class="ui-menu-item" id="ui-id-364" tabindex="-1" role="option">Marmo Italic</li><li class="ui-menu-item" id="ui-id-365" tabindex="-1" role="option">Redwing-Medium</li><li class="ui-menu-item" id="ui-id-366" tabindex="-1" role="option">Redwing-Light</li><li class="ui-menu-item" id="ui-id-367" tabindex="-1" role="option">Ustroke</li><li class="ui-menu-item" id="ui-id-368" tabindex="-1" role="option">Bareona</li><li class="ui-menu-item" id="ui-id-369" tabindex="-1" role="option">Grames</li><li class="ui-menu-item" id="ui-id-370" tabindex="-1" role="option">Slender Bold</li><li class="ui-menu-item" id="ui-id-371" tabindex="-1" role="option">Architectural</li><li class="ui-menu-item" id="ui-id-372" tabindex="-1" role="option">Mordak</li><li class="ui-menu-item" id="ui-id-373" tabindex="-1" role="option">Genuine</li><li class="ui-menu-item" id="ui-id-374" tabindex="-1" role="option">Metro-Uber</li><li class="ui-menu-item" id="ui-id-375" tabindex="-1" role="option">NeonOne</li><li class="ui-menu-item" id="ui-id-376" tabindex="-1" role="option">Forward</li><li class="ui-menu-item" id="ui-id-377" tabindex="-1" role="option">Jumpie</li><li class="ui-menu-item" id="ui-id-378" tabindex="-1" role="option">Helio</li><li class="ui-menu-item" id="ui-id-379" tabindex="-1" role="option">DonJose</li><li class="ui-menu-item" id="ui-id-380" tabindex="-1" role="option">Gradiola</li><li class="ui-menu-item" id="ui-id-381" tabindex="-1" role="option">KubosBold</li><li class="ui-menu-item" id="ui-id-382" tabindex="-1" role="option">Samble</li><li class="ui-menu-item" id="ui-id-383" tabindex="-1" role="option">Anson</li><li class="ui-menu-item" id="ui-id-384" tabindex="-1" role="option">Alpha_echo</li><li class="ui-menu-item" id="ui-id-385" tabindex="-1" role="option">Morena Bold</li><li class="ui-menu-item" id="ui-id-386" tabindex="-1" role="option">Morena Extra Light</li><li class="ui-menu-item" id="ui-id-387" tabindex="-1" role="option">Ocean Bold</li><li class="ui-menu-item" id="ui-id-388" tabindex="-1" role="option">Ocean Light</li><li class="ui-menu-item" id="ui-id-389" tabindex="-1" role="option">SpartanMB ExtraBold</li><li class="ui-menu-item" id="ui-id-390" tabindex="-1" role="option">Deciso Bold</li><li class="ui-menu-item" id="ui-id-391" tabindex="-1" role="option">Deciso Extra Light</li><li class="ui-menu-item" id="ui-id-392" tabindex="-1" role="option">Deciso Extra Light Italic</li><li class="ui-menu-item" id="ui-id-393" tabindex="-1" role="option">Facon</li><li class="ui-menu-item" id="ui-id-394" tabindex="-1" role="option">Overmuch</li><li class="ui-menu-item" id="ui-id-395" tabindex="-1" role="option">Auroor</li><li class="ui-menu-item" id="ui-id-396" tabindex="-1" role="option">ForestSmooth</li><li class="ui-menu-item" id="ui-id-397" tabindex="-1" role="option">Rock N Roll</li><li class="ui-menu-item" id="ui-id-398" tabindex="-1" role="option">Searocks</li><li class="ui-menu-item" id="ui-id-399" tabindex="-1" role="option">Rise</li><li class="ui-menu-item" id="ui-id-400" tabindex="-1" role="option">Rustico</li><li class="ui-menu-item" id="ui-id-401" tabindex="-1" role="option">Berg</li><li class="ui-menu-item" id="ui-id-402" tabindex="-1" role="option">Fixer</li><li class="ui-menu-item" id="ui-id-403" tabindex="-1" role="option">Briberra</li><li class="ui-menu-item" id="ui-id-404" tabindex="-1" role="option">Adrenaline</li><li class="ui-menu-item" id="ui-id-405" tabindex="-1" role="option">Follana</li><li class="ui-menu-item" id="ui-id-406" tabindex="-1" role="option">Halogen-Regular</li><li class="ui-menu-item" id="ui-id-407" tabindex="-1" role="option">Beautify-Script</li><li class="ui-menu-item" id="ui-id-408" tabindex="-1" role="option">Oraqle Script</li><li class="ui-menu-item" id="ui-id-409" tabindex="-1" role="option">Quantum</li><li class="ui-menu-item" id="ui-id-410" tabindex="-1" role="option">Maveryk</li><li class="ui-menu-item" id="ui-id-411" tabindex="-1" role="option">The Bold Font</li><li class="ui-menu-item" id="ui-id-412" tabindex="-1" role="option">Failed</li><li class="ui-menu-item" id="ui-id-413" tabindex="-1" role="option">Failed3dFilled</li><li class="ui-menu-item" id="ui-id-414" tabindex="-1" role="option">Matamata Bold</li><li class="ui-menu-item" id="ui-id-415" tabindex="-1" role="option">Take-Cover</li><li class="ui-menu-item" id="ui-id-416" tabindex="-1" role="option">Lobster</li><li class="ui-menu-item" id="ui-id-417" tabindex="-1" role="option">Brusher Regular</li><li class="ui-menu-item" id="ui-id-418" tabindex="-1" role="option">Maxwell Bold</li><li class="ui-menu-item" id="ui-id-419" tabindex="-1" role="option">Noelan Script</li><li class="ui-menu-item" id="ui-id-420" tabindex="-1" role="option">Bangers</li><li class="ui-menu-item" id="ui-id-421" tabindex="-1" role="option">Bungee-Shade</li><li class="ui-menu-item" id="ui-id-422" tabindex="-1" role="option">Bungee-Outline</li><li class="ui-menu-item" id="ui-id-423" tabindex="-1" role="option">Lyric Poetry</li><li class="ui-menu-item" id="ui-id-424" tabindex="-1" role="option">Playlist Caps</li><li class="ui-menu-item" id="ui-id-425" tabindex="-1" role="option">Playlist Script</li><li class="ui-menu-item" id="ui-id-426" tabindex="-1" role="option">Broken Chalk</li><li class="ui-menu-item" id="ui-id-427" tabindex="-1" role="option">Graphic Attitude</li><li class="ui-menu-item" id="ui-id-428" tabindex="-1" role="option">Ansley Display-Bold</li><li class="ui-menu-item" id="ui-id-429" tabindex="-1" role="option">Headline</li><li class="ui-menu-item" id="ui-id-430" tabindex="-1" role="option">Script</li><li class="ui-menu-item" id="ui-id-431" tabindex="-1" role="option">Point</li><li class="ui-menu-item" id="ui-id-432" tabindex="-1" role="option">PorterSansBlock</li><li class="ui-menu-item" id="ui-id-433" tabindex="-1" role="option">U-Typewritter</li><li class="ui-menu-item" id="ui-id-434" tabindex="-1" role="option">Komoda-Regular</li><li class="ui-menu-item" id="ui-id-435" tabindex="-1" role="option">BEBAS</li><li class="ui-menu-item" id="ui-id-436" tabindex="-1" role="option">Russian (language)</li><li class="ui-menu-item" id="ui-id-437" tabindex="-1" role="option">Arabic (language)</li><li class="ui-menu-item" id="ui-id-438" tabindex="-1" role="option">Swedish (language)</li><li class="ui-menu-item" id="ui-id-439" tabindex="-1" role="option">Japanese (language)</li><li class="ui-menu-item" id="ui-id-440" tabindex="-1" role="option">Bengali (language)</li><li class="ui-menu-item" id="ui-id-441" tabindex="-1" role="option">Devanagari (language)</li><li class="ui-menu-item" id="ui-id-442" tabindex="-1" role="option">Tamil (language)</li><li class="ui-menu-item" id="ui-id-443" tabindex="-1" role="option">Telugu (language)</li><li class="ui-menu-item" id="ui-id-444" tabindex="-1" role="option">Thai (language)</li><li class="ui-menu-item" id="ui-id-445" tabindex="-1" role="option">Lao (language)</li><li class="ui-menu-item" id="ui-id-446" tabindex="-1" role="option">Amatic-Bold</li><li class="ui-menu-item" id="ui-id-447" tabindex="-1" role="option">AmaticSC-Regular</li><li class="ui-menu-item" id="ui-id-448" tabindex="-1" role="option">Fascinate-Regular</li><li class="ui-menu-item" id="ui-id-449" tabindex="-1" role="option">FascinateInline-Regular</li><li class="ui-menu-item" id="ui-id-450" tabindex="-1" role="option">srfm-neon</li><li class="ui-menu-item" id="ui-id-451" tabindex="-1" role="option">FerroRosso</li><li class="ui-menu-item" id="ui-id-452" tabindex="-1" role="option">bloody</li><li class="ui-menu-item" id="ui-id-453" tabindex="-1" role="option">zombie</li><li class="ui-menu-item" id="ui-id-454" tabindex="-1" role="option">8bitOperatorPlus-Regular</li><li class="ui-menu-item" id="ui-id-455" tabindex="-1" role="option">Airbrush</li><li class="ui-menu-item" id="ui-id-456" tabindex="-1" role="option">AlegreSans-Regular</li><li class="ui-menu-item" id="ui-id-457" tabindex="-1" role="option">AlexBrush-Regular</li><li class="ui-menu-item" id="ui-id-458" tabindex="-1" role="option">Alpenkreuzer</li><li class="ui-menu-item" id="ui-id-459" tabindex="-1" role="option">Amble-Bold</li><li class="ui-menu-item" id="ui-id-460" tabindex="-1" role="option">Amble-Light</li><li class="ui-menu-item" id="ui-id-461" tabindex="-1" role="option">Antonio-Bold</li><li class="ui-menu-item" id="ui-id-462" tabindex="-1" role="option">Antonio-Regular</li><li class="ui-menu-item" id="ui-id-463" tabindex="-1" role="option">Archistico_Bold</li><li class="ui-menu-item" id="ui-id-464" tabindex="-1" role="option">Archistico_Simple</li><li class="ui-menu-item" id="ui-id-465" tabindex="-1" role="option">Arizonia-Regular</li><li class="ui-menu-item" id="ui-id-466" tabindex="-1" role="option">Asap-Bold</li><li class="ui-menu-item" id="ui-id-467" tabindex="-1" role="option">Asap-Regular</li><li class="ui-menu-item" id="ui-id-468" tabindex="-1" role="option">At Sign Regular</li><li class="ui-menu-item" id="ui-id-469" tabindex="-1" role="option">AutourOne-Regular</li><li class="ui-menu-item" id="ui-id-470" tabindex="-1" role="option">BELLABOO-Regular</li><li class="ui-menu-item" id="ui-id-471" tabindex="-1" role="option">Bizon</li><li class="ui-menu-item" id="ui-id-472" tabindex="-1" role="option">BonvenoCF-Light</li><li class="ui-menu-item" id="ui-id-473" tabindex="-1" role="option">Boogaloo-Regular</li><li class="ui-menu-item" id="ui-id-474" tabindex="-1" role="option">BreeSerif-Regular</li><li class="ui-menu-item" id="ui-id-475" tabindex="-1" role="option">Brewsky</li><li class="ui-menu-item" id="ui-id-476" tabindex="-1" role="option">BrokenGlass</li><li class="ui-menu-item" id="ui-id-477" tabindex="-1" role="option">Bromine</li><li class="ui-menu-item" id="ui-id-478" tabindex="-1" role="option">BubblegumSans-Regular</li><li class="ui-menu-item" id="ui-id-479" tabindex="-1" role="option">Cabin-Bold</li><li class="ui-menu-item" id="ui-id-480" tabindex="-1" role="option">Cabin-Italic</li><li class="ui-menu-item" id="ui-id-481" tabindex="-1" role="option">Cabin-Regular</li><li class="ui-menu-item" id="ui-id-482" tabindex="-1" role="option">CabinSketch-Bold</li><li class="ui-menu-item" id="ui-id-483" tabindex="-1" role="option">CakeFrostingDecorative</li><li class="ui-menu-item" id="ui-id-484" tabindex="-1" role="option">Calligraserif</li><li class="ui-menu-item" id="ui-id-485" tabindex="-1" role="option">CevicheOne-Regular</li><li class="ui-menu-item" id="ui-id-486" tabindex="-1" role="option">Chalk Line Outline</li><li class="ui-menu-item" id="ui-id-487" tabindex="-1" role="option">ChunkFive-Roman</li><li class="ui-menu-item" id="ui-id-488" tabindex="-1" role="option">Coda-Heavy</li><li class="ui-menu-item" id="ui-id-489" tabindex="-1" role="option">Comfortaa_Bold</li><li class="ui-menu-item" id="ui-id-490" tabindex="-1" role="option">Comfortaa_Thin</li><li class="ui-menu-item" id="ui-id-491" tabindex="-1" role="option">ComicRelief</li><li class="ui-menu-item" id="ui-id-492" tabindex="-1" role="option">Constantine</li><li class="ui-menu-item" id="ui-id-493" tabindex="-1" role="option">CooperHewitt-Light</li><li class="ui-menu-item" id="ui-id-494" tabindex="-1" role="option">CooperHewitt-LightItalic</li><li class="ui-menu-item" id="ui-id-495" tabindex="-1" role="option">CooperHewitt-Semibold</li><li class="ui-menu-item" id="ui-id-496" tabindex="-1" role="option">CooperHewitt-SemiboldItalic</li><li class="ui-menu-item" id="ui-id-497" tabindex="-1" role="option">CooperHewitt-Thin</li><li class="ui-menu-item" id="ui-id-498" tabindex="-1" role="option">CooperHewitt-ThinItalic</li><li class="ui-menu-item" id="ui-id-499" tabindex="-1" role="option">Cuprum-Bold</li><li class="ui-menu-item" id="ui-id-500" tabindex="-1" role="option">Cuprum-Regular</li><li class="ui-menu-item" id="ui-id-501" tabindex="-1" role="option">DPSDbeyond</li><li class="ui-menu-item" id="ui-id-502" tabindex="-1" role="option">Dagerotypos_0003</li><li class="ui-menu-item" id="ui-id-503" tabindex="-1" role="option">DancingScriptOT</li><li class="ui-menu-item" id="ui-id-504" tabindex="-1" role="option">DarkGardenMK</li><li class="ui-menu-item" id="ui-id-505" tabindex="-1" role="option">Delius-Regular</li><li class="ui-menu-item" id="ui-id-506" tabindex="-1" role="option">DeliusUnicase-Bold</li><li class="ui-menu-item" id="ui-id-507" tabindex="-1" role="option">Double Strike</li><li class="ui-menu-item" id="ui-id-508" tabindex="-1" role="option">DrawveticaMini</li><li class="ui-menu-item" id="ui-id-509" tabindex="-1" role="option">Dustismo</li><li class="ui-menu-item" id="ui-id-510" tabindex="-1" role="option">Dustismo_Roman</li><li class="ui-menu-item" id="ui-id-511" tabindex="-1" role="option">Dustismo_Roman_Italic</li><li class="ui-menu-item" id="ui-id-512" tabindex="-1" role="option">Economica-Bold</li><li class="ui-menu-item" id="ui-id-513" tabindex="-1" role="option">Economica-Regular</li><li class="ui-menu-item" id="ui-id-514" tabindex="-1" role="option">Eligible-Bold</li><li class="ui-menu-item" id="ui-id-515" tabindex="-1" role="option">Eligible-Italic</li><li class="ui-menu-item" id="ui-id-516" tabindex="-1" role="option">EligibleSans-Regular</li><li class="ui-menu-item" id="ui-id-517" tabindex="-1" role="option">EuphoriaScript-Regular</li><li class="ui-menu-item" id="ui-id-518" tabindex="-1" role="option">FingerPaint-Regular</li><li class="ui-menu-item" id="ui-id-519" tabindex="-1" role="option">FloppyDisk</li><li class="ui-menu-item" id="ui-id-520" tabindex="-1" role="option">Gold Plated</li><li class="ui-menu-item" id="ui-id-521" tabindex="-1" role="option">GrandHotel-Regular</li><li class="ui-menu-item" id="ui-id-522" tabindex="-1" role="option">Gravity-Bold</li><li class="ui-menu-item" id="ui-id-523" tabindex="-1" role="option">Gravity-Book</li><li class="ui-menu-item" id="ui-id-524" tabindex="-1" role="option">Gravity-Light</li><li class="ui-menu-item" id="ui-id-525" tabindex="-1" role="option">GreatVibes-Regular</li><li class="ui-menu-item" id="ui-id-526" tabindex="-1" role="option">Grunge Handwriting</li><li class="ui-menu-item" id="ui-id-527" tabindex="-1" role="option">Halogen</li><li class="ui-menu-item" id="ui-id-528" tabindex="-1" role="option">Hand Drawn Shapes</li><li class="ui-menu-item" id="ui-id-529" tabindex="-1" role="option">HeavyEquipment</li><li class="ui-menu-item" id="ui-id-530" tabindex="-1" role="option">Imperial Web</li><li class="ui-menu-item" id="ui-id-531" tabindex="-1" role="option">Isabella</li><li class="ui-menu-item" id="ui-id-532" tabindex="-1" role="option">Janitor</li><li class="ui-menu-item" id="ui-id-533" tabindex="-1" role="option">JosefinSans-Bold</li><li class="ui-menu-item" id="ui-id-534" tabindex="-1" role="option">JosefinSans-SemiBold</li><li class="ui-menu-item" id="ui-id-535" tabindex="-1" role="option">JuraBook</li><li class="ui-menu-item" id="ui-id-536" tabindex="-1" role="option">JuraDemiBold</li><li class="ui-menu-item" id="ui-id-537" tabindex="-1" role="option">KaushanScript-Regular</li><li class="ui-menu-item" id="ui-id-538" tabindex="-1" role="option">Lavi</li><li class="ui-menu-item" id="ui-id-539" tabindex="-1" role="option">LeagueScriptThin-Regular</li><li class="ui-menu-item" id="ui-id-540" tabindex="-1" role="option">LinBiolinum_K</li><li class="ui-menu-item" id="ui-id-541" tabindex="-1" role="option">Matchbook</li><li class="ui-menu-item" id="ui-id-542" tabindex="-1" role="option">Milkmoustachio</li><li class="ui-menu-item" id="ui-id-543" tabindex="-1" role="option">Molengo-Regular</li><li class="ui-menu-item" id="ui-id-544" tabindex="-1" role="option">Monoton-Regular</li><li class="ui-menu-item" id="ui-id-545" tabindex="-1" role="option">Monthoers</li><li class="ui-menu-item" id="ui-id-546" tabindex="-1" role="option">Niconne-Regular</li><li class="ui-menu-item" id="ui-id-547" tabindex="-1" role="option">Nobile-Medium</li><li class="ui-menu-item" id="ui-id-548" tabindex="-1" role="option">Nobile-MediumItalic</li><li class="ui-menu-item" id="ui-id-549" tabindex="-1" role="option">OpenSans-CondBold</li><li class="ui-menu-item" id="ui-id-550" tabindex="-1" role="option">OpenSans-CondLight</li><li class="ui-menu-item" id="ui-id-551" tabindex="-1" role="option">OpenSans-CondLightItalic</li><li class="ui-menu-item" id="ui-id-552" tabindex="-1" role="option">OpenSans-Light</li><li class="ui-menu-item" id="ui-id-553" tabindex="-1" role="option">OpenSans-Regular</li><li class="ui-menu-item" id="ui-id-554" tabindex="-1" role="option">Overhaul</li><li class="ui-menu-item" id="ui-id-555" tabindex="-1" role="option">Overlock-Bold</li><li class="ui-menu-item" id="ui-id-556" tabindex="-1" role="option">Overlock-BoldItalic</li><li class="ui-menu-item" id="ui-id-557" tabindex="-1" role="option">Overlock-Italic</li><li class="ui-menu-item" id="ui-id-558" tabindex="-1" role="option">PAETRB</li><li class="ui-menu-item" id="ui-id-559" tabindex="-1" role="option">PAETRRG</li><li class="ui-menu-item" id="ui-id-560" tabindex="-1" role="option">Pacifico-Bold</li><li class="ui-menu-item" id="ui-id-561" tabindex="-1" role="option">Pacifico-Light</li><li class="ui-menu-item" id="ui-id-562" tabindex="-1" role="option">Pacifico</li><li class="ui-menu-item" id="ui-id-563" tabindex="-1" role="option">PassionOne-Regular</li><li class="ui-menu-item" id="ui-id-564" tabindex="-1" role="option">Pecita</li><li class="ui-menu-item" id="ui-id-565" tabindex="-1" role="option">PermanentMarker</li><li class="ui-menu-item" id="ui-id-566" tabindex="-1" role="option">PoetsenOne-Regular</li><li class="ui-menu-item" id="ui-id-567" tabindex="-1" role="option">Portmanteau Regular</li><li class="ui-menu-item" id="ui-id-568" tabindex="-1" role="option">PrintedCircuitBoard</li><li class="ui-menu-item" id="ui-id-569" tabindex="-1" role="option">Quantico-Regular</li><li class="ui-menu-item" id="ui-id-570" tabindex="-1" role="option">Quicksand-Bold</li><li class="ui-menu-item" id="ui-id-571" tabindex="-1" role="option">Quicksand-BoldItalic</li><li class="ui-menu-item" id="ui-id-572" tabindex="-1" role="option">Quicksand-Italic</li><li class="ui-menu-item" id="ui-id-573" tabindex="-1" role="option">Quicksand-Regular</li><li class="ui-menu-item" id="ui-id-574" tabindex="-1" role="option">QuicksandDash-Regular</li><li class="ui-menu-item" id="ui-id-575" tabindex="-1" role="option">Quimbie Ultra Heavy</li><li class="ui-menu-item" id="ui-id-576" tabindex="-1" role="option">Quimbie</li><li class="ui-menu-item" id="ui-id-577" tabindex="-1" role="option">Railway</li><li class="ui-menu-item" id="ui-id-578" tabindex="-1" role="option">Raleway-Bold</li><li class="ui-menu-item" id="ui-id-579" tabindex="-1" role="option">Raleway-BoldItalic</li><li class="ui-menu-item" id="ui-id-580" tabindex="-1" role="option">Raleway-Light</li><li class="ui-menu-item" id="ui-id-581" tabindex="-1" role="option">Raleway-LightItalic</li><li class="ui-menu-item" id="ui-id-582" tabindex="-1" role="option">Raleway-Regular</li><li class="ui-menu-item" id="ui-id-583" tabindex="-1" role="option">Raleway-SemiBold</li><li class="ui-menu-item" id="ui-id-584" tabindex="-1" role="option">Raleway-Thin</li><li class="ui-menu-item" id="ui-id-585" tabindex="-1" role="option">RalewayDots-Regular</li><li class="ui-menu-item" id="ui-id-586" tabindex="-1" role="option">Rambla-Regular</li><li class="ui-menu-item" id="ui-id-587" tabindex="-1" role="option">Roboto-Bold</li><li class="ui-menu-item" id="ui-id-588" tabindex="-1" role="option">Roboto-BoldItalic</li><li class="ui-menu-item" id="ui-id-589" tabindex="-1" role="option">Roboto-Light</li><li class="ui-menu-item" id="ui-id-590" tabindex="-1" role="option">Roboto-LightItalic</li><li class="ui-menu-item" id="ui-id-591" tabindex="-1" role="option">Roboto-Regular</li><li class="ui-menu-item" id="ui-id-592" tabindex="-1" role="option">Roboto-Thin</li><li class="ui-menu-item" id="ui-id-593" tabindex="-1" role="option">RobotoCondensed-Bold</li><li class="ui-menu-item" id="ui-id-594" tabindex="-1" role="option">RobotoCondensed-Light</li><li class="ui-menu-item" id="ui-id-595" tabindex="-1" role="option">RobotoCondensed-Regular</li><li class="ui-menu-item" id="ui-id-596" tabindex="-1" role="option">Rochester</li><li class="ui-menu-item" id="ui-id-597" tabindex="-1" role="option">RockSalt</li><li class="ui-menu-item" id="ui-id-598" tabindex="-1" role="option">Sail-Regular</li><li class="ui-menu-item" id="ui-id-599" tabindex="-1" role="option">Saniretro</li><li class="ui-menu-item" id="ui-id-600" tabindex="-1" role="option">Sanitechtro</li><li class="ui-menu-item" id="ui-id-601" tabindex="-1" role="option">Sansita-Bold</li><li class="ui-menu-item" id="ui-id-602" tabindex="-1" role="option">Sansita-ExtraBold</li><li class="ui-menu-item" id="ui-id-603" tabindex="-1" role="option">Sansita-Italic</li><li class="ui-menu-item" id="ui-id-604" tabindex="-1" role="option">Sansita-Regular</li><li class="ui-menu-item" id="ui-id-605" tabindex="-1" role="option">Scratched Letters</li><li class="ui-menu-item" id="ui-id-606" tabindex="-1" role="option">SixCaps</li><li class="ui-menu-item" id="ui-id-607" tabindex="-1" role="option">Sniglet-ExtraBold</li><li class="ui-menu-item" id="ui-id-608" tabindex="-1" role="option">Sniglet-Regular</li><li class="ui-menu-item" id="ui-id-609" tabindex="-1" role="option">Targa MS Hand</li><li class="ui-menu-item" id="ui-id-610" tabindex="-1" role="option">Targa MS</li><li class="ui-menu-item" id="ui-id-611" tabindex="-1" role="option">Targa</li><li class="ui-menu-item" id="ui-id-612" tabindex="-1" role="option">TitanOne-Regular</li><li class="ui-menu-item" id="ui-id-613" tabindex="-1" role="option">Topeka</li><li class="ui-menu-item" id="ui-id-614" tabindex="-1" role="option">Ubuntu-Title</li><li class="ui-menu-item" id="ui-id-615" tabindex="-1" role="option">Viafont</li><li class="ui-menu-item" id="ui-id-616" tabindex="-1" role="option">acacia</li><li class="ui-menu-item" id="ui-id-617" tabindex="-1" role="option">andina</li><li class="ui-menu-item" id="ui-id-618" tabindex="-1" role="option">architxt</li><li class="ui-menu-item" id="ui-id-619" tabindex="-1" role="option">banksb20</li><li class="ui-menu-item" id="ui-id-620" tabindex="-1" role="option">banksb26</li><li class="ui-menu-item" id="ui-id-621" tabindex="-1" role="option">bgrove</li><li class="ui-menu-item" id="ui-id-622" tabindex="-1" role="option">bgroveb</li><li class="ui-menu-item" id="ui-id-623" tabindex="-1" role="option">blurrr letters</li><li class="ui-menu-item" id="ui-id-624" tabindex="-1" role="option">dustismo_bold</li><li class="ui-menu-item" id="ui-id-625" tabindex="-1" role="option">dustismo_italic</li><li class="ui-menu-item" id="ui-id-626" tabindex="-1" role="option">e-Pececito-font</li><li class="ui-menu-item" id="ui-id-627" tabindex="-1" role="option">edo</li><li class="ui-menu-item" id="ui-id-628" tabindex="-1" role="option">lampoon</li><li class="ui-menu-item" id="ui-id-629" tabindex="-1" role="option">ldr3</li><li class="ui-menu-item" id="ui-id-630" tabindex="-1" role="option">linesquare_rounded_extended</li><li class="ui-menu-item" id="ui-id-631" tabindex="-1" role="option">look sir, droids</li><li class="ui-menu-item" id="ui-id-632" tabindex="-1" role="option">pointfree</li><li class="ui-menu-item" id="ui-id-633" tabindex="-1" role="option">quadrata preciosa</li><li class="ui-menu-item" id="ui-id-634" tabindex="-1" role="option">sohoma_extrabold</li><li class="ui-menu-item" id="ui-id-635" tabindex="-1" role="option">sohoma_light</li><li class="ui-menu-item" id="ui-id-636" tabindex="-1" role="option">vipond_octic</li><li class="ui-menu-item" id="ui-id-637" tabindex="-1" role="option">clipart</li><li class="ui-menu-item" id="ui-id-638" tabindex="-1" role="option">custom_font</li></ul></div><div class="ui-selectmenu-menu ui-front"><ul aria-hidden="true" aria-labelledby="pp6_c-button" id="pp6_c-menu" class="ui-menu ui-widget ui-widget-content ui-corner-bottom" role="listbox" tabindex="0" aria-activedescendant="ui-id-639" aria-disabled="false"><li class="ui-menu-item ui-state-focus" id="ui-id-639" tabindex="-1" role="option">No option</li><li class="ui-menu-item" id="ui-id-640" tabindex="-1" role="option">Glow Normal</li><li class="ui-menu-item" id="ui-id-641" tabindex="-1" role="option">Glow Strong</li><li class="ui-menu-item" id="ui-id-642" tabindex="-1" role="option">Outline &amp; Glow</li><li class="ui-menu-item" id="ui-id-643" tabindex="-1" role="option">Gradient</li><li class="ui-menu-item" id="ui-id-644" tabindex="-1" role="option">Background</li><li class="ui-menu-item" id="ui-id-645" tabindex="-1" role="option">Shadow thinner</li><li class="ui-menu-item" id="ui-id-646" tabindex="-1" role="option">Shadow thin</li><li class="ui-menu-item" id="ui-id-647" tabindex="-1" role="option">Shadow large</li><li class="ui-menu-item" id="ui-id-648" tabindex="-1" role="option">Shadow X large</li><li class="ui-menu-item" id="ui-id-649" tabindex="-1" role="option">Shadow Mix</li><li class="ui-menu-item" id="ui-id-650" tabindex="-1" role="option">Outline thinner</li><li class="ui-menu-item" id="ui-id-651" tabindex="-1" role="option">Outline thin</li><li class="ui-menu-item" id="ui-id-652" tabindex="-1" role="option">Outline large</li><li class="ui-menu-item" id="ui-id-653" tabindex="-1" role="option">Outline Mix</li><li class="ui-menu-item" id="ui-id-654" tabindex="-1" role="option">Texture &amp; Sh.</li><li class="ui-menu-item" id="ui-id-655" tabindex="-1" role="option">Texture &amp; Out.</li></ul></div><div class="ui-selectmenu-menu ui-front"><ul aria-hidden="true" aria-labelledby="distortion_value-button" id="distortion_value-menu" class="ui-menu ui-widget ui-widget-content ui-corner-bottom" role="listbox" tabindex="0" aria-activedescendant="ui-id-656" aria-disabled="false"><li class="ui-menu-item ui-state-focus" id="ui-id-656" tabindex="-1" role="option">Normal</li><li class="ui-menu-item" id="ui-id-657" tabindex="-1" role="option">Medium</li><li class="ui-menu-item" id="ui-id-658" tabindex="-1" role="option">Strong</li><li class="ui-menu-item" id="ui-id-659" tabindex="-1" role="option">Reverse Normal</li><li class="ui-menu-item" id="ui-id-660" tabindex="-1" role="option">Reverse Medium</li><li class="ui-menu-item" id="ui-id-661" tabindex="-1" role="option">Reverse Strong</li></ul></div><div class="ui-selectmenu-menu ui-front"><ul aria-hidden="true" aria-labelledby="opacity_t-button" id="opacity_t-menu" class="ui-menu ui-widget ui-widget-content ui-corner-bottom" role="listbox" tabindex="0" aria-activedescendant="ui-id-662" aria-disabled="false"><li class="ui-menu-item ui-state-focus" id="ui-id-662" tabindex="-1" role="option">No</li><li class="ui-menu-item" id="ui-id-663" tabindex="-1" role="option">90%</li><li class="ui-menu-item" id="ui-id-664" tabindex="-1" role="option">80%</li><li class="ui-menu-item" id="ui-id-665" tabindex="-1" role="option">70%</li><li class="ui-menu-item" id="ui-id-666" tabindex="-1" role="option">60%</li><li class="ui-menu-item" id="ui-id-667" tabindex="-1" role="option">50%</li><li class="ui-menu-item" id="ui-id-668" tabindex="-1" role="option">40%</li><li class="ui-menu-item" id="ui-id-669" tabindex="-1" role="option">30%</li><li class="ui-menu-item" id="ui-id-670" tabindex="-1" role="option">20%</li><li class="ui-menu-item" id="ui-id-671" tabindex="-1" role="option">10%</li><li class="ui-menu-item" id="ui-id-672" tabindex="-1" role="option">5%</li></ul></div><div class="ui-selectmenu-menu ui-front"><ul aria-hidden="true" aria-labelledby="zoom_select_data-button" id="zoom_select_data-menu" class="ui-menu ui-widget ui-widget-content ui-corner-bottom" role="listbox" tabindex="0" aria-activedescendant="ui-id-343" aria-disabled="false"><li class="ui-menu-item ui-state-focus" id="ui-id-343" tabindex="-1" role="option">100%</li><li class="ui-menu-item" id="ui-id-344" tabindex="-1" role="option">90%</li><li class="ui-menu-item" id="ui-id-345" tabindex="-1" role="option">80%</li><li class="ui-menu-item" id="ui-id-346" tabindex="-1" role="option">70%</li><li class="ui-menu-item" id="ui-id-347" tabindex="-1" role="option">60%</li><li class="ui-menu-item" id="ui-id-348" tabindex="-1" role="option">50%</li><li class="ui-menu-item" id="ui-id-349" tabindex="-1" role="option">40%</li><li class="ui-menu-item" id="ui-id-350" tabindex="-1" role="option">30%</li><li class="ui-menu-item" id="ui-id-351" tabindex="-1" role="option">20%</li><li class="ui-menu-item" id="ui-id-352" tabindex="-1" role="option">10%</li></ul></div></body></html>
